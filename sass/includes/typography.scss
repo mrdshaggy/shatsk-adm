@@ -1,0 +1,53 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: 52px;
+}
+
+h2, .h2 {
+  font-size: 38px;
+}
+
+h3, .h3 {
+  font-size: 32px;
+}
+
+h4, .h4 {
+  font-size: 24px;
+}
+
+h5, .h5 {
+  font-size: 22px;
+}
+
+
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Colors
+.text-white          { color: #fff; }
+.text-default        { color: $c-text; }
+.text-light          { color: $c-text-light; }
+
+// Weight
+.text-regular           { font-weight: 500; }
+.text-medium            { font-weight: 600; }
+.text-bold, strong, b   { font-weight: 700; }
+
+// Other
+.text-overspaced     { letter-spacing: 3px; }

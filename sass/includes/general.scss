@@ -1,0 +1,41 @@
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    * {
+        box-sizing: border-box;
+    }
+}
+
+//container
+.container {
+    padding: 0 60px;
+    margin: 0 auto;
+    width: 100%;
+}
+//end container
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 100%;
+    overflow: hidden;
+    
+    &__main {
+        background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
+        width: 73%;
+    }
+
+    &__sidebar {
+        width: 27%;
+        background: #fff;
+    }
+}
+
+img {
+    max-width: 100%;
+}
