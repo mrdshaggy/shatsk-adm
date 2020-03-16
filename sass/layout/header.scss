@@ -1,5 +1,4 @@
 .header {
-  height: 70px;
   padding: 0 60px;
   border-bottom: 1px solid $c-border;
   display: flex;
@@ -7,4 +6,21 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+
+  &__nav {
+    margin-bottom: -1px;
+  }
+
+  &__link {
+    transition: color .2s;
+    padding: 0 20px;
+    height: 70px;
+    &:hover {
+      color: $c-text;
+    }
+    &.is-active {
+      border-bottom: 1px solid #000;
+      color: $c-text;
+    }
+  }
 }

@@ -4,4 +4,33 @@ a, button {
  box-shadow: none;
  border: none;
  background: none;
+ color: inherit;
+}
+
+.btn {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 36px;
+  &--transparent {
+    transition: color .2s;
+    &:hover {
+      color: $c-text;
+    }
+    &.is-active {
+      background: #FFFFFF;
+      box-shadow: 0px 4px 16px rgba(51, 59, 72, 0.08);
+      color: $c-text;
+    }
+  }
+
+  &--icon {
+    transition: color .2s;
+    &:hover {
+      color: $c-text;
+    }
+  }
 }

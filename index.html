@@ -19,7 +19,7 @@
                     <img src="img/logo.svg" alt="">
                 </div>
                 <nav class="header__nav">
-                    <button type="button" class="header__link">Календар</button>
+                    <button type="button" class="header__link is-active">Календар</button>
                     <button type="button" class="header__link">Бронювання</button>
                     <button type="button" class="header__link">Номери</button>
                 </nav>
@@ -27,6 +27,39 @@
                     <button type="button" class="header__link">Гостинний двір</button>
                 </nav>
             </header>
+
+            <div class="dashboard">
+                <div class="dashboard__type">
+                    <button type="button" class="btn btn--transparent">Тиждень</button>
+                    <button type="button" class="btn btn--transparent is-active">Місяць</button>
+                    <button type="button" class="btn btn--transparent">Рік</button>
+                </div>
+                <div class="dashboard__period">
+                    <button type="button" class="btn btn--icon" id="pRangeLeft">
+                        <img src="img/arrow-left.svg" alt="">
+                    </button>
+                    <div class="p-range" id="pRange">
+                        <button type="button" class="btn btn--transparent">Січень</button>
+                        <button type="button" class="btn btn--transparent">Лютий</button>
+                        <button type="button" class="btn btn--transparent">Березень</button>
+                        <button type="button" class="btn btn--transparent is-active">Квітень</button>
+                        <button type="button" class="btn btn--transparent is-active">Травень</button>
+                        <button type="button" class="btn btn--transparent">Червень</button>
+                        <button type="button" class="btn btn--transparent">Липень</button>
+                        <button type="button" class="btn btn--transparent">Серпень</button>
+                        <button type="button" class="btn btn--transparent">Вересень</button>
+                        <button type="button" class="btn btn--transparent">Жовтень</button>
+                        <button type="button" class="btn btn--transparent">Листопад</button>
+                        <button type="button" class="btn btn--transparent">Грудень</button>
+                    </div>
+                    <button type="button" class="btn btn--icon" id="pRangeRight">
+                        <img src="img/arrow-right.svg" alt="">
+                    </button>
+                </div>
+                <div class="dashboard__view" data-view="month">
+                    Тут календар
+                </div>
+            </div>
         </main>
 
         <aside class="wrapper__sidebar">
