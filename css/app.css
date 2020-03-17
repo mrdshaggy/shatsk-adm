@@ -688,6 +688,58 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?z0e6so");
+  src: url("../fonts/icomoon.eot?z0e6so#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?z0e6so") format("truetype"), url("../fonts/icomoon.woff?z0e6so") format("woff"), url("../fonts/icomoon.svg?z0e6so#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #8ba0c0;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-arrow-left:before {
+  content: "\e900"; }
+
+.icon-arrow-right:before {
+  content: "\e901"; }
+
+.icon-calendar-next:before {
+  content: "\e902"; }
+
+.icon-calendar-prev:before {
+  content: "\e903"; }
+
+.icon-caret-left:before {
+  content: "\e904"; }
+
+.icon-caret-right:before {
+  content: "\e905"; }
+
+.icon-check:before {
+  content: "\e906"; }
+
+.icon-guests:before {
+  content: "\e907"; }
+
+.icon-menu:before {
+  content: "\e908"; }
+
+.icon-remove:before {
+  content: "\e909"; }
+
 html, body * {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -702,10 +754,15 @@ h2, .h2 {
   font-size: 38px; }
 
 h3, .h3 {
-  font-size: 32px; }
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px; }
 
 h4, .h4 {
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px; }
 
 h5, .h5 {
   font-size: 22px; }
@@ -737,7 +794,7 @@ h5, .h5 {
 .text-white {
   color: #fff; }
 
-.text-default {
+.text-dark {
   color: #3B495F; }
 
 .text-light {
@@ -818,10 +875,14 @@ a, button {
       background: #FFFFFF;
       box-shadow: 0px 4px 16px rgba(51, 59, 72, 0.08);
       color: #3B495F; }
-  .btn--icon {
+  .btn--text {
     transition: color .2s; }
-    .btn--icon:hover {
+    .btn--text .icon {
+      transition: color .2s; }
+    .btn--text:hover {
       color: #3B495F; }
+      .btn--text:hover .icon {
+        color: #3B495F; }
 
 .header {
   padding: 0 60px;

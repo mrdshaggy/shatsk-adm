@@ -27,10 +27,16 @@ a, button {
     }
   }
 
-  &--icon {
+  &--text {
     transition: color .2s;
+    .icon {
+      transition: color .2s;
+    }
     &:hover {
       color: $c-text;
+      .icon {
+        color: $c-text;
+      }
     }
   }
 }
