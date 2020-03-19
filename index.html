@@ -13,7 +13,7 @@
     
     <div class="wrapper">
 
-        <main class="wrapper__main">
+        <main class="main">
             <header class="header">
                 <div class="header__logo">
                     <img src="img/logo.svg" alt="">
@@ -66,7 +66,7 @@
                                 <li class="calendar__weekday">Нд</li>
                             </ul>
                             <div class="calendar__body" data-startday="3">
-                                <button class="calendar__day" data-selected="selected" data-position="first">1 <span>360</span></button>
+                                <button class="calendar__day" data-selected="selected" data-position="first">1 <span>3600</span></button>
                                 <button class="calendar__day" data-activity="1" data-selected="selected">2 <span>360</span></button>
                                 <button class="calendar__day" data-selected="selected">3 <span>360</span></button>
                                 <button class="calendar__day" data-selected="selected" data-position="last">4 <span>360</span></button>
@@ -165,7 +165,7 @@
                     <div class="guest is-active">
                         <div class="guest__room">Одномісний</div>
                         <div class="guest__term">3 ночі</div>
-                        <div class="guest__name">Андрій</div>
+                        <div class="guest__name">Андрій Андрійович Андрійко</div>
                     </div>
                     <div class="guest">
                         <div class="guest__room">Двомісний</div>
@@ -181,8 +181,88 @@
             </div>
         </main>
 
-        <aside class="wrapper__sidebar">
-            
+        <aside class="sidebar">
+            <div class="sidebar__head">
+                <!-- <h3 class="text-dark">Ср, 1 квітня 2020</h3> -->
+                <h3 class="text-dark">Ср, 1 квітня 2020 -
+                    Нд, 5 квітня 2020</h3>
+                <div class="sidebar__info">
+                    <p>Чт, 2.04 - Сб, 4.04</p>
+                    <p>2 ночі</p>
+                </div>
+            </div>
+            <div class="sidebar__body">
+                <div class="sidebar__row sidebar__row--apartment" data-status="active">
+                    <div class="row-flex row-flex--between">
+                        <div>
+                            <span class="text-small">1</span>
+                            <i class="icon icon-guests"></i>
+                            <span class="text-dark">Одномісний</span>
+                            <p class="text-small price">500 грн</p>
+                        </div>
+                        <div class="text-green">Обрано</div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row--apartment" data-status="active">
+                    <div class="row-flex row-flex--between">
+                        <div>
+                            <span class="text-small">2</span>
+                            <i class="icon icon-guests"></i>
+                            <span class="text-dark">Двомісний 1</span>
+                            <p class="text-small price">750 грн</p>
+                        </div>
+                        <button class="btn btn--green">Обрати</button>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row--apartment" data-status="active">
+                    <div class="row-flex row-flex--between">
+                        <div>
+                            <span class="text-small">4</span>
+                            <i class="icon icon-guests"></i>
+                            <span class="text-dark">Сімейний</span>
+                            <p class="text-small price">1250 грн</p>
+                        </div>
+                        <div class="text-green">Обрано</div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row--apartment" data-status="active">
+                    <div class="row-flex row-flex--between">
+                        <div>
+                            <span class="text-small">2</span>
+                            <i class="icon icon-guests"></i>
+                            <span class="text-dark">Двомісний 2</span>
+                            <p class="text-small price">750 грн</p>
+                        </div>
+                        <button class="btn btn--green">Обрати</button>
+                    </div>
+                </div>
+                
+                <div class="sidebar__row sidebar__row--apartment" data-status="booked">
+                    <div class="row-flex row-flex--between">
+                        <div>
+                            <span class="text-small">8</span>
+                            <i class="icon icon-guests"></i>
+                            <span class="text-dark">Котедж</span>
+                            <p class="text-small price">2500 грн</p>
+                        </div>
+                        <div class="text-dark text-right">Заброньовано <p class="text-small">1.04 - 8.04</p></div>
+                    </div>
+                </div>
+                <div class="sidebar__row sidebar__row--apartment" data-status="booked">
+                    <div class="row-flex row-flex--between">
+                        <div>
+                            <span class="text-small">3</span>
+                            <i class="icon icon-guests"></i>
+                            <span class="text-dark">Тримісний</span>
+                            <p class="text-small price">1000 грн</p>
+                        </div>
+                        <div class="text-dark text-right">Заброньовано <p class="text-small">4.04 - 8.04</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__footer">
+
+            </div>
         </aside>
 
     </div>

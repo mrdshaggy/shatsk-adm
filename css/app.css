@@ -370,6 +370,51 @@
   padding-top: 50px !important;
   padding-bottom: 50px !important; }
 
+.row-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start; }
+  .row-flex--between {
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .row-flex--around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .row-flex--center {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .row-flex--end {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+  .row-flex--middle {
+    -ms-flex-align: center;
+        align-items: center; }
+  .row-flex--bottom {
+    -ms-flex-align: end;
+        align-items: flex-end; }
+  .row-flex--top {
+    -ms-flex-align: start;
+        align-items: flex-start; }
+  .row-flex--nowrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+  .row-flex--reverse {
+    -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse; }
+  .row-flex--column {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .row-flex--column.row-flex--reverse {
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -798,6 +843,9 @@ h5, .h5 {
 .text-blue {
   color: #3787FF; }
 
+.text-green {
+  color: #00BB6B; }
+
 .text-white {
   color: #fff; }
 
@@ -826,7 +874,8 @@ body {
   height: 100%; }
   html *,
   body * {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    vertical-align: middle; }
 
 .container {
   padding: 0 60px;
@@ -844,10 +893,10 @@ body {
       align-items: stretch;
   height: 100%;
   overflow: hidden; }
-  .wrapper__main {
+  .wrapper .main {
     background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
     width: 73%; }
-  .wrapper__sidebar {
+  .wrapper .sidebar {
     width: 27%;
     background: #fff; }
 
@@ -882,6 +931,9 @@ a, button {
       background: #FFFFFF;
       box-shadow: 0px 4px 16px rgba(51, 59, 72, 0.08);
       color: #3B495F; }
+  .btn--green {
+    background: #00BB6B;
+    color: #fff; }
   .btn--text {
     transition: color .2s; }
     .btn--text .icon {
@@ -1283,3 +1335,54 @@ a, button {
     background: #00BB6B; }
     .guest.is-active > * {
       color: #fff; }
+
+.sidebar__head {
+  padding: 30px 30px 25px;
+  border-bottom: 1px solid rgba(210, 217, 227, 0.4);
+  min-height: 140px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.sidebar__info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .sidebar__info > * {
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 22px;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto; }
+
+.sidebar__row {
+  min-height: 84px;
+  padding: 25px 30px;
+  border-bottom: 1px solid rgba(210, 217, 227, 0.4);
+  position: relative;
+  margin-top: -1px; }
+  .sidebar__row[data-status]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%; }
+  .sidebar__row[data-status="active"]:before {
+    background-color: #00BB6B; }
+  .sidebar__row[data-status="booked"]:before {
+    background-color: #3787FF; }
+  .sidebar__row--apartment {
+    padding: 30px 40px 18px 30px; }
+    .sidebar__row--apartment .icon-guests {
+      margin: 0 10px 0 5px; }
+    .sidebar__row--apartment .price {
+      padding-left: 42px; }
+    .sidebar__row--apartment .btn--green {
+      margin: -10px -20px 0 0; }

@@ -7,23 +7,3 @@
   flex-wrap: nowrap;
   align-items: center;
 }
-
-.mark {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $c-border;
-  transition: .2s;
-  .icon {
-    color: #fff;
-  }
-  &--check {
-    background: $c-blue;
-  }
-  &button:hover {
-    background: $c-text;
-  }
-}

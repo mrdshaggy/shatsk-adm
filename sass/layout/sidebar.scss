@@ -1,0 +1,57 @@
+.sidebar {
+  &__head {
+    padding: 30px 30px 25px;
+    border-bottom: 1px solid rgba($c-border, .4);
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      margin-top: 8px;
+      font-size: 18px;
+      line-height: 22px;
+      flex-basis: auto;
+    }
+  }
+
+  &__body {
+
+  }
+
+  &__row {
+    min-height: 84px;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba($c-border, .4);
+    position: relative;
+    margin-top: -1px;
+
+    &[data-status]:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+    }
+    &[data-status="active"]:before { background-color: $c-green; }
+    &[data-status="booked"]:before { background-color: $c-blue; }
+
+    &--apartment {
+      padding: 30px 40px 18px 30px;
+      .icon-guests {
+        margin: 0 10px 0 5px;
+      }
+      .price {
+        padding-left: 42px;
+      }
+      .btn--green {
+        margin: -10px -20px 0 0;
+      }
+    }
+  }
+}

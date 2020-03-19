@@ -27,6 +27,11 @@ a, button {
     }
   }
 
+  &--green {
+    background: $c-green;
+    color: #fff;
+  }
+
   &--text {
     transition: color .2s;
     .icon {
