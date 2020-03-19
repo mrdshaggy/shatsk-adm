@@ -33,6 +33,11 @@ h5, .h5 {
   font-size: 22px;
 }
 
+.text-small {
+  font-size: 12px;
+  line-height: 15px;
+}
+
 
 
 // Alignment
@@ -48,8 +53,9 @@ h5, .h5 {
 .text-capitalize     { text-transform: capitalize; }
 
 // Colors
+.text-blue           { color: $c-blue; }
 .text-white          { color: #fff; }
-.text-dark        { color: $c-text; }
+.text-dark           { color: $c-text; }
 .text-light          { color: $c-text-light; }
 
 // Weight
