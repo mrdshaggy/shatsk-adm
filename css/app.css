@@ -1158,6 +1158,23 @@ a, button {
   .markbutton:hover {
     background: #3B495F; }
 
+.apartment {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%; }
+  .apartment__info {
+    width: 40px; }
+    .apartment__info .icon-guests {
+      margin-left: 3px; }
+  .apartment__status {
+    justify-self: flex-end;
+    margin-left: auto;
+    text-align: right; }
+    .apartment__status .btn--green {
+      margin: -10px -20px 0 0; }
+
 .header {
   padding: 0 60px;
   border-bottom: 1px solid #D2D9E3;
@@ -1367,6 +1384,8 @@ a, button {
   border-bottom: 1px solid rgba(210, 217, 227, 0.4);
   position: relative;
   margin-top: -1px; }
+  .sidebar__row--apartment {
+    padding: 30px 40px 18px 30px; }
   .sidebar__row[data-status]:before {
     content: '';
     position: absolute;
@@ -1378,11 +1397,3 @@ a, button {
     background-color: #00BB6B; }
   .sidebar__row[data-status="booked"]:before {
     background-color: #3787FF; }
-  .sidebar__row--apartment {
-    padding: 30px 40px 18px 30px; }
-    .sidebar__row--apartment .icon-guests {
-      margin: 0 10px 0 5px; }
-    .sidebar__row--apartment .price {
-      padding-left: 42px; }
-    .sidebar__row--apartment .btn--green {
-      margin: -10px -20px 0 0; }

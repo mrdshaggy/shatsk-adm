@@ -30,6 +30,10 @@
     position: relative;
     margin-top: -1px;
 
+    &--apartment {
+      padding: 30px 40px 18px 30px;
+    }
+
     &[data-status]:before {
       content: '';
       position: absolute;
@@ -40,18 +44,5 @@
     }
     &[data-status="active"]:before { background-color: $c-green; }
     &[data-status="booked"]:before { background-color: $c-blue; }
-
-    &--apartment {
-      padding: 30px 40px 18px 30px;
-      .icon-guests {
-        margin: 0 10px 0 5px;
-      }
-      .price {
-        padding-left: 42px;
-      }
-      .btn--green {
-        margin: -10px -20px 0 0;
-      }
-    }
   }
 }

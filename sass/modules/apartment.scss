@@ -1,0 +1,23 @@
+.apartment {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  &__info {
+    width: 40px;
+    .icon-guests {
+      margin-left: 3px;
+    }
+  }
+  &__name {
+
+  }
+  &__status {
+    justify-self: flex-end;
+    margin-left: auto;
+    text-align: right;
+    .btn--green {
+      margin: -10px -20px 0 0;
+    }
+  }
+}
