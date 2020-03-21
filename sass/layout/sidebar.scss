@@ -1,4 +1,8 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
   &__head {
     padding: 30px 30px 25px;
     border-bottom: 1px solid rgba($c-border, .4);
@@ -20,7 +24,8 @@
   }
 
   &__body {
-
+    flex: 1;
+    overflow-y: auto;
   }
 
   &__row {
@@ -29,6 +34,9 @@
     border-bottom: 1px solid rgba($c-border, .4);
     position: relative;
     margin-top: -1px;
+    width: 100%;
+    cursor: pointer;
+    
 
     &--apartment {
       padding: 30px 40px 18px 30px;

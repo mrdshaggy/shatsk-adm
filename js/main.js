@@ -1,6 +1,9 @@
 console.log('main.js');
 
+
+//
 // Period scroll
+//
 var content = document.getElementById('pRange'),
     scrollStep = 100;
 
@@ -26,3 +29,21 @@ document.getElementById('pRangeLeft').addEventListener('click', function(e) {
     content.scrollTo((sl - scrollStep), 0);
   }
 });
+
+
+
+//
+// Guests today
+//
+var days = document.querySelectorAll('.calendar__day');
+var todayGuests = document.querySelector('.guests');
+for (var i=0;i<days.length;i++) {
+  days[i].addEventListener('click', toggleGuests);
+}
+function toggleGuests() {
+  if (todayGuests.classList.contains('is-active')) {
+    todayGuests.classList.remove('is-active');
+  } else {
+    todayGuests.classList.add('is-active');
+  }
+}

@@ -44,4 +44,15 @@ a, button {
       }
     }
   }
+
+  &--full {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    flex-direction: column;
+    padding: 15px 0;
+    h4 {
+      margin-bottom: 4px;
+    }
+  }
 }
