@@ -812,6 +812,10 @@ h4, .h4 {
 h5, .h5 {
   font-size: 22px; }
 
+h6, .h6 {
+  font-size: 18px;
+  line-height: 22px; }
+
 .text-small {
   font-size: 12px;
   line-height: 15px; }
@@ -966,8 +970,7 @@ a, button {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 8px;
-  overflow: hidden; }
+  grid-gap: 8px; }
   .calendar__body[data-startday="1"] > .calendar__day:first-child {
     -ms-grid-column: 1;
         grid-column-start: 1; }
@@ -1056,23 +1059,6 @@ a, button {
     position: relative; }
     .calendar__day[data-selected="selected"] > span {
       color: #fff; }
-    .calendar__day[data-selected="selected"]:after {
-      content: "\e903";
-      font-family: 'icomoon' !important;
-      speak: none;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
-      color: inherit;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #00BB6B;
-      position: absolute;
-      right: calc(100% - 2px);
-      top: 50%;
-      transform: translateY(-50%); }
     .calendar__day[data-selected="selected"] + .calendar__day[data-selected="selected"] {
       background: #65d19d;
       position: relative;
@@ -1185,6 +1171,17 @@ a, button {
     text-align: right; }
     .apartment__status .btn--green {
       margin: -10px -20px 0 0; }
+
+.free-rooms {
+  padding: 25px 40px 80px 30px;
+  border-top: 1px solid rgba(210, 217, 227, 0.4); }
+
+.f-room {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 25px; }
 
 .header {
   padding: 0 60px;

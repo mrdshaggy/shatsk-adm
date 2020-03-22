@@ -10,7 +10,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 8px;
-    overflow: hidden;
     &[data-startday="1"] {
       & > .calendar__day:first-child { grid-column-start: 1; }
     }
@@ -96,15 +95,6 @@
       border-top-right-radius: 0;
       position: relative;
       & > span { color: #fff; }
-      &:after {
-        content: "\e903";
-        @include icomoon();
-        color: $c-green;
-        position: absolute;
-        right: calc(100% - 2px);
-        top: 50%;
-        transform: translateY(-50%);
-      }
 
       & + & {
         background: #65d19d;
