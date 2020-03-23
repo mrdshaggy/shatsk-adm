@@ -1,6 +1,9 @@
 .free-rooms {
-  padding: 25px 40px 80px 30px;
+  padding: 25px 40px 25px 30px;
   border-top: 1px solid rgba($c-border, .4);
+  max-height: 40vh;
+  min-height: 300px;
+  overflow: auto;
 }
 
 .f-room {

@@ -12,24 +12,38 @@
     grid-gap: 8px;
     &[data-startday="1"] {
       & > .calendar__day:first-child { grid-column-start: 1; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+7) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+8) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
     &[data-startday="2"] {
       & > .calendar__day:first-child { grid-column-start: 2; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+6) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+7) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
     &[data-startday="3"] {
       & > .calendar__day:first-child { grid-column-start: 3; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+5) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+6) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
     &[data-startday="4"] {
       & > .calendar__day:first-child { grid-column-start: 4; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+4) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+5) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
     &[data-startday="5"] {
       & > .calendar__day:first-child { grid-column-start: 5; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+3) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+4) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
     &[data-startday="6"] {
       & > .calendar__day:first-child { grid-column-start: 6; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+2) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+3) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
     &[data-startday="7"] {
       & > .calendar__day:first-child { grid-column-start: 7; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+1) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+2) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
     }
   }
 
@@ -54,7 +68,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 8px;
-    transition: .2s;
+    transition: background-color .2s;
     & > span {
       font-size: 12px;
       line-height: 15px;

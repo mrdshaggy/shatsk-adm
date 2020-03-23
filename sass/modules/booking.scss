@@ -1,0 +1,26 @@
+.booking {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__body {
+    margin-top: 15px;
+  }
+  &__room {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & > * {
+      flex: 2;
+      text-align: right;
+      &:first-child {
+        text-align: left;
+        flex: 3;
+      }
+    }
+  }
+}

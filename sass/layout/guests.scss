@@ -1,8 +1,8 @@
 .guests {
   padding: 30px 60px;
   border-top: 1px solid $c-border;
-  position: fixed;
-  z-index: 2;
+  position: absolute;
+  z-index: 3;
   width: 73%;
   left: 0;
   bottom: 0;
@@ -50,6 +50,7 @@
   padding: 16px 20px;
   position: relative;
   cursor: pointer;
+  transition: .2s;
   &:last-child {
     margin-right: 0;
   }
@@ -88,6 +89,7 @@
       position: absolute;
       right: 12px;
       bottom: 16px;
+      transition: .2s;
     }
   }
 
@@ -97,4 +99,38 @@
       color: #fff;
     }
   }
+  &:hover {
+    background: $c-green;
+    & > * {
+      color: #fff;
+    }
+    &.guest--checked {
+      background: $c-blue;
+      border-color: $c-blue;
+      &:after {
+        background: #fff;
+        color: $c-blue;
+      }
+    }
+  }
+}
+
+
+
+.guests-btn {
+  border-top: 1px solid $c-border;
+  position: absolute;
+  z-index: 3;
+  width: 73%;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
+  border-radius: 0;
+  height: 70px;
+  justify-content: flex-start;
+  padding: 0 60px;
+}
+
+.guests-close-btn {
+  padding-left: 0;
 }
