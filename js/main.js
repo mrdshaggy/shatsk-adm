@@ -48,6 +48,24 @@ function toggleGuests() {
   }
 }
 
+//
+// Add button actions
+//
+var addActionBtn = document.querySelector('.add-action__btn');
+var addActionClose = document.querySelector('.add-action__close');
+var addAction = document.querySelector('.add-action');
+addActionBtn.addEventListener('click', showContent);
+addActionClose.addEventListener('click', hideContent);
+function showContent() {
+  addAction.classList.add('is-active');
+}
+function hideContent() {
+  addAction.classList.remove('is-active');
+}
+
+
+
+
 
 //
 // Calendar actions

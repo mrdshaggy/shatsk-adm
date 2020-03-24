@@ -15,6 +15,12 @@ a, button {
   height: 36px;
   padding: 0 20px;
   border-radius: 36px;
+  &--lg {
+    height: 44px;
+    border-radius: 12px;
+    padding: 0 40px;
+  }
+
   &--transparent {
     transition: color .2s;
     &:hover {
@@ -54,6 +60,34 @@ a, button {
     min-height: 96px;
     h4 {
       margin-bottom: 4px;
+    }
+  }
+
+  &--fullwidth {
+    width: 100%;
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  & > .btn {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--column {
+    flex-direction: column;
+    & > .btn {
+      margin-right: 0;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

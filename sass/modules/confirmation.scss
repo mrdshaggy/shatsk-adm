@@ -1,0 +1,11 @@
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .mark + h4 {
+        margin-top: 15px;
+    }
+}

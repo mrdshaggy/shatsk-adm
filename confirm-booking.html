@@ -182,92 +182,21 @@
         </main>
 
         <aside class="sidebar">
-            <div class="sidebar__head sidebar__head--back">
-                <h3 class="text-dark"><button type="button" class="btn btn--text"><i class="icon icon-arrow-left"></i></button>Бронювання</h3>
-                <div class="sidebar__info">
-                    <p>Чт, 2.04 - Сб, 4.04</p>
-                    <p>2 ночі</p>
-                </div>
-            </div>
             <div class="sidebar__body">
-                <div class="sidebar__row">
-                    <div class="apartment apartment--booked">
-                        <button class="mark"><i class="icon icon-remove"></i></button>
-                        <div class="apartment__info">
-                            <span class="text-small">2</span>
-                            <i class="icon icon-guests"></i>
-                        </div>
-                        <div class="apartment__name">
-                            <span class="text-dark">Двомісний 1</span>
-                        </div>
-                        <div class="apartment__status">
-                            <div class="text-light">750 грн</div>
-                        </div>
+                <div class="confirmation">
+                    <div class="mark mark--success">
+                        <i class="icon icon-check"></i>
                     </div>
-                    <div class="apartment apartment--booked">
-                        <button class="mark"><i class="icon icon-remove"></i></button>
-                        <div class="apartment__info">
-                            <span class="text-small">4</span>
-                            <i class="icon icon-guests"></i>
-                        </div>
-                        <div class="apartment__name">
-                            <span class="text-dark">Сімейний</span>
-                        </div>
-                        <div class="apartment__status">
-                            <div class="text-light">1250 грн</div>
-                        </div>
-                    </div>
+                    <h4>Бронювання створено</h4>
                 </div>
-                <div class="sidebar__row">
-                    <div class="form-group">
-                        <div class="form-label">Ім'я гостя</div>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <div class="form-label">Телефон</div>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <div class="form-label">Коментар</div>
-                        <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-                    </div>
-                </div>
-                <div class="sidebar__row">
-                    <div class="booking">
-                        <div class="booking__head">
-                            <p class="text-dark">Вартість бронювання</p>
-                            <p class="text-dark">4000 грн</p>
-                        </div>
-                        <div class="booking__body">
-                            <div class="booking__room">
-                                <p>Двомісний 1</p>
-                                <p>750 * 2</p>
-                                <p>1500 грн</p>
-                            </div>
-                            <div class="booking__room">
-                                <p>Сімейний</p>
-                                <p>1250 * 2</p>
-                                <p>2500 грн</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar__row">
-                    <div class="booking">
-                        <div class="booking__head">
-                            <p class="text-dark">До оплати</p>
-                            <h4 class="text-dark">4000 грн</h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- <button class="btn btn--green btn--full">
-                    <h4 class="text-white">Підтвердити</h4>
-                </button> -->
             </div>
             <div class="sidebar__footer">
-                <button class="btn btn--green btn--full">
-                    <h4 class="text-white">Підтвердити</h4>
-                </button>
+                <div class="sidebar__row">
+                    <div class="btn-group btn-group--column">
+                        <button type="button" class="btn btn--lg btn--fullwidth btn--green">Повернутися до календаря</button>
+                        <button type="button" class="btn btn--lg btn--fullwidth btn--text">Скасувати зміни</button>
+                    </div>
+                </div>
             </div>
         </aside>
 
