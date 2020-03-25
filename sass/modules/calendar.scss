@@ -4,6 +4,9 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 25px 0;
+    @media (max-height: 795px) and (min-width: 992px) {
+      padding: 20px 0 15px;
+    }
   }
 
   &__body {

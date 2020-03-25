@@ -902,10 +902,13 @@ body {
   overflow: hidden; }
   .wrapper .main {
     background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
-    width: 73%; }
+    width: calc(100% - 390px); }
   .wrapper .sidebar {
-    width: 27%;
+    width: 390px;
     background: #fff; }
+  .wrapper .guests,
+  .wrapper .guests-btn {
+    width: calc(100% - 390px); }
 
 img {
   max-width: 100%; }
@@ -963,6 +966,9 @@ a, button {
     min-height: 96px; }
     .btn--full h4 {
       margin-bottom: 4px; }
+    @media (max-height: 795px) and (min-width: 992px) {
+      .btn--full {
+        min-height: 80px; } }
   .btn--fullwidth {
     width: 100%; }
 
@@ -996,6 +1002,9 @@ a, button {
   -ms-flex-pack: start;
       justify-content: flex-start;
   padding: 25px 0; }
+  @media (max-height: 795px) and (min-width: 992px) {
+    .calendar__head {
+      padding: 20px 0 15px; } }
 
 .calendar__body {
   display: -ms-grid;
@@ -1267,6 +1276,9 @@ a, button {
     text-align: right; }
     .apartment__status .btn--green {
       margin: -10px -20px 0 0; }
+      @media (max-height: 795px) and (min-width: 992px) {
+        .apartment__status .btn--green {
+          margin-top: 0; } }
   .apartment--booked {
     -ms-flex-align: center;
         align-items: center; }
@@ -1397,12 +1409,19 @@ textarea.form-control {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center; }
+  @media (max-width: 1439px) {
+    .header {
+      padding-left: 30px;
+      padding-right: 30px; } }
   .header__nav {
     margin-bottom: -1px; }
   .header__link {
     transition: color .2s;
     padding: 0 20px;
     height: 70px; }
+    @media (max-height: 795px) and (min-width: 992px) {
+      .header__link {
+        height: 50px; } }
     .header__link:hover {
       color: #3B495F; }
     .header__link.is-active {
@@ -1410,7 +1429,18 @@ textarea.form-control {
       color: #3B495F; }
 
 .dashboard {
-  padding: 30px 60px 50px; }
+  padding: 30px 60px 80px;
+  max-height: calc(100% - 80px);
+  overflow-y: auto; }
+  @media (max-height: 795px) and (min-width: 992px) {
+    .dashboard {
+      padding-top: 20px;
+      padding-bottom: 50px;
+      max-height: calc(100% - 60px); } }
+  @media (max-width: 1439px) {
+    .dashboard {
+      padding-left: 30px;
+      padding-right: 30px; } }
   .dashboard__type {
     display: -ms-flexbox;
     display: flex;
@@ -1419,6 +1449,9 @@ textarea.form-control {
     -ms-flex-direction: row;
         flex-direction: row;
     margin-bottom: 30px; }
+    @media (max-height: 795px) and (min-width: 992px) {
+      .dashboard__type {
+        margin-bottom: 20px; } }
   .dashboard__period {
     display: -ms-flexbox;
     display: flex;
@@ -1429,6 +1462,9 @@ textarea.form-control {
     -ms-flex-align: start;
         align-items: flex-start;
     margin-bottom: 15px; }
+    @media (max-height: 795px) and (min-width: 992px) {
+      .dashboard__period {
+        margin-bottom: 5px; } }
     .dashboard__period .p-range {
       display: -ms-flexbox;
       display: flex;
@@ -1470,7 +1506,6 @@ textarea.form-control {
   border-top: 1px solid #D2D9E3;
   position: absolute;
   z-index: 3;
-  width: 73%;
   left: 0;
   bottom: 0;
   background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
@@ -1590,7 +1625,6 @@ textarea.form-control {
   border-top: 1px solid #D2D9E3;
   position: absolute;
   z-index: 3;
-  width: 73%;
   left: 0;
   bottom: 0;
   background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
@@ -1599,6 +1633,13 @@ textarea.form-control {
   -ms-flex-pack: start;
       justify-content: flex-start;
   padding: 0 60px; }
+  @media (max-height: 795px) and (min-width: 992px) {
+    .guests-btn {
+      height: 50px; } }
+  @media (max-width: 1439px) {
+    .guests-btn {
+      padding-left: 30px;
+      padding-right: 30px; } }
 
 .guests-close-btn {
   padding-left: 0; }
@@ -1622,6 +1663,10 @@ textarea.form-control {
         flex-wrap: nowrap;
     -ms-flex-pack: center;
         justify-content: center; }
+    @media (max-height: 795px) and (min-width: 992px) {
+      .sidebar__head {
+        padding: 20px 30px;
+        min-height: 100px; } }
     .sidebar__head--back h3, .sidebar__head--back .h3 {
       display: -ms-flexbox;
       display: flex; }
@@ -1651,10 +1696,18 @@ textarea.form-control {
     position: relative;
     margin-top: -1px;
     width: 100%; }
+    @media (max-height: 795px) and (min-width: 992px) {
+      .sidebar__row {
+        padding: 20px 30px;
+        min-height: auto; } }
     .sidebar__row > .text-dark + .text-small {
       margin-top: 15px; }
     .sidebar__row--apartment {
       padding: 30px 40px 18px 30px; }
+      @media (max-height: 795px) and (min-width: 992px) {
+        .sidebar__row--apartment {
+          padding-top: 20px;
+          padding-bottom: 20px; } }
     .sidebar__row[data-status]:before {
       content: '';
       position: absolute;

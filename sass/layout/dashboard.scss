@@ -1,10 +1,24 @@
 .dashboard {
-  padding: 30px 60px 50px;
+  padding: 30px 60px 80px;
+  max-height: calc(100% - 80px);
+  overflow-y: auto;
+  @media (max-height: 795px) and (min-width: 992px) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-height: calc(100% - 60px);
+  }
+  @media (max-width: 1439px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   &__type {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     margin-bottom: 30px;
+    @media (max-height: 795px) and (min-width: 992px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__period {
@@ -13,6 +27,9 @@
     flex-direction: row;
     align-items: flex-start;
     margin-bottom: 15px;
+    @media (max-height: 795px) and (min-width: 992px) {
+      margin-bottom: 5px;
+    }
 
     .p-range {
       display: flex;

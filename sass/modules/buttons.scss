@@ -61,6 +61,9 @@ a, button {
     h4 {
       margin-bottom: 4px;
     }
+    @media (max-height: 795px) and (min-width: 992px) {
+      min-height: 80px;
+    }
   }
 
   &--fullwidth {

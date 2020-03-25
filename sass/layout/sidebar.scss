@@ -11,6 +11,10 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    @media (max-height: 795px) and (min-width: 992px) {
+      padding: 20px 30px;
+      min-height: 100px;
+    }
     &--back {
       h3, .h3 {
         display: flex;
@@ -46,6 +50,10 @@
     position: relative;
     margin-top: -1px;
     width: 100%;
+    @media (max-height: 795px) and (min-width: 992px) {
+      padding: 20px 30px;
+      min-height: auto;
+    }
 
     & > .text-dark {
       & + .text-small {
@@ -55,6 +63,10 @@
 
     &--apartment {
       padding: 30px 40px 18px 30px;
+      @media (max-height: 795px) and (min-width: 992px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
     }
 
     &[data-status]:before {

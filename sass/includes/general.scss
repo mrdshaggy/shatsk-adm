@@ -32,12 +32,17 @@ body {
     
     .main {
         background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
-        width: 73%;
+        width: calc(100% - 390px);
     }
 
     .sidebar {
-        width: 27%;
+        width: 390px;
         background: #fff;
+    }
+    
+    .guests,
+    .guests-btn {
+        width: calc(100% - 390px);
     }
 }
 

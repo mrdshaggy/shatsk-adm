@@ -3,7 +3,6 @@
   border-top: 1px solid $c-border;
   position: absolute;
   z-index: 3;
-  width: 73%;
   left: 0;
   bottom: 0;
   background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
@@ -121,7 +120,6 @@
   border-top: 1px solid $c-border;
   position: absolute;
   z-index: 3;
-  width: 73%;
   left: 0;
   bottom: 0;
   background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
@@ -129,6 +127,13 @@
   height: 70px;
   justify-content: flex-start;
   padding: 0 60px;
+  @media (max-height: 795px) and (min-width: 992px) {
+    height: 50px;
+  }
+  @media (max-width: 1439px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .guests-close-btn {
