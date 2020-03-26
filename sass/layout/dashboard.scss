@@ -68,6 +68,9 @@
       & > .month {
         flex: 1;
       }
+      @media (max-width: 1379px) {
+        grid-gap: 30px;
+      }
     }
   }
 }

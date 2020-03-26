@@ -1,3 +1,12 @@
+:root {
+  --border-radius: 12px;
+}
+@media screen and (max-width: 1099px) {
+  :root {
+    --border-radius: 8px;
+  }
+}
+
 .calendar {
   &__head {
     display: flex;
@@ -13,40 +22,43 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 8px;
+    @media (max-width: 1379px) {
+        grid-gap: 6px;
+    }
     &[data-startday="1"] {
       & > .calendar__day:first-child { grid-column-start: 1; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+7) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+8) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+7) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+8) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
     &[data-startday="2"] {
       & > .calendar__day:first-child { grid-column-start: 2; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+6) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+7) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+6) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+7) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
     &[data-startday="3"] {
       & > .calendar__day:first-child { grid-column-start: 3; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+5) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+6) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+5) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+6) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
     &[data-startday="4"] {
       & > .calendar__day:first-child { grid-column-start: 4; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+4) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+5) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+4) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+5) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
     &[data-startday="5"] {
       & > .calendar__day:first-child { grid-column-start: 5; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+3) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+4) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+3) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+4) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
     &[data-startday="6"] {
       & > .calendar__day:first-child { grid-column-start: 6; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+2) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+3) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+2) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+3) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
     &[data-startday="7"] {
       & > .calendar__day:first-child { grid-column-start: 7; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+1) { border-top-right-radius: 12px; border-bottom-right-radius: 12px;; }
-      & > .calendar__day[data-selected="selected"]:nth-child(7n+2) { border-top-left-radius: 12px; border-bottom-left-radius: 12px; &:before { display: none; } }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+1) { border-top-right-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius);; }
+      & > .calendar__day[data-selected="selected"]:nth-child(7n+2) { border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); &:before { display: none; } }
     }
   }
 
@@ -61,7 +73,7 @@
     flex-basis: calc(100% / 7);
     min-width: 48px;
     height: 56px;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     color: $c-text;
     font-weight: 500;
     font-size: 18px;
@@ -72,12 +84,26 @@
     align-items: center;
     padding: 8px;
     transition: background-color .2s;
+    @media (max-width: 1379px) {
+      height: 0;
+      padding: calc(calc(100vw - 350px) * 0.008) 0 calc(100% - calc(calc(100vw - 350px) * 0.008));
+      // padding: 0.58vw 0 calc(100% - 0.58vw);
+      // padding: 0.9vw 0 calc(100% - 0.9vw);
+      min-width: 0;
+      font-size: 1.317vw;
+      line-height: 1.2;
+    }
     & > span {
       font-size: 12px;
       line-height: 15px;
       font-weight: 700;
       color: $c-text-light;
       transition: .2s;
+      @media (max-width: 1379px) {
+        font-size: 0.9vw;
+        line-height: 1.1;
+        font-weight: 600;
+      }
     }
     &[data-status="current"] {
       background: #fff;
@@ -131,7 +157,7 @@
       }
 
       &[data-position="single"] {
-        border-radius: 12px;
+        border-radius: var(--border-radius);
         &:after {
           display: none;
         }
@@ -148,8 +174,8 @@
         }
       }
       &[data-position="last"] {
-        border-bottom-right-radius: 12px;
-        border-top-right-radius: 12px;
+        border-bottom-right-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
         background: $c-green!important;
         &:after {
           content: "\e902";
