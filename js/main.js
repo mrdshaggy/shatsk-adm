@@ -31,6 +31,27 @@ document.getElementById('pRangeLeft').addEventListener('click', function(e) {
 });
 
 
+//
+// Mob menu
+//
+// header__burger
+var burger = document.querySelector('.header__burger');
+var mobNav = document.querySelector('.mobile-nav');
+burger.addEventListener('click', toggleMobNav);
+function toggleMobNav() {
+  if (mobNav.classList.contains('is-active')) {
+    mobNav.classList.remove('is-active');
+  } else {
+    mobNav.classList.add('is-active');
+  }
+}
+document.addEventListener('click', function (event) {
+  // If the click happened inside the the container, bail
+  if (!event.target.closest('.mobile-nav')) return;
+  mobNav.classList.remove('is-active');
+}, false);
+
+
 
 //
 // Guests today

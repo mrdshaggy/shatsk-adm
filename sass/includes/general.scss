@@ -36,6 +36,9 @@ body {
         @media (max-width: 1379px) {
             width: calc(100% - 350px);
         }
+        @media (max-width: 991px) {
+            width: 100%;
+        }
     }
 
     .sidebar {
@@ -44,6 +47,18 @@ body {
         @media (max-width: 1379px) {
             width: 350px;
         }
+        @media (max-width: 991px) {
+            transform: translateX(100%);
+        }
+        @media (max-width: 767px) {
+            transform: none;
+            position: fixed;
+            top: 60%;
+            left: 0;
+            height: 40%;
+            width: 100%;
+            z-index: 3;
+        }
     }
     
     .guests,
@@ -51,6 +66,9 @@ body {
         width: calc(100% - 390px);
         @media (max-width: 1379px) {
             width: calc(100% - 350px);
+        }
+        @media (max-width: 991px) {
+            width: 100%;
         }
     }
 }

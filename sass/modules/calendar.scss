@@ -6,7 +6,11 @@
     --border-radius: 8px;
   }
 }
-
+@media screen and (max-width: 991px) {
+  :root {
+    --border-radius: 12px;
+  }
+}
 .calendar {
   &__head {
     display: flex;
@@ -15,6 +19,9 @@
     padding: 25px 0;
     @media (max-height: 795px) and (min-width: 992px) {
       padding: 20px 0 15px;
+    }
+    @media (max-width: 767px) {
+      padding: 15px 0;
     }
   }
 
@@ -78,58 +85,88 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 8px;
+    position: relative;
     transition: background-color .2s;
     @media (max-width: 1379px) {
+      padding-bottom: calc(100% - 1px);
       height: 0;
-      padding: calc(calc(100vw - 350px) * 0.008) 0 calc(100% - calc(calc(100vw - 350px) * 0.008));
-      // padding: 0.58vw 0 calc(100% - 0.58vw);
-      // padding: 0.9vw 0 calc(100% - 0.9vw);
       min-width: 0;
-      font-size: 1.317vw;
-      line-height: 1.2;
     }
+
     & > span {
-      font-size: 12px;
-      line-height: 15px;
-      font-weight: 700;
-      color: $c-text-light;
-      transition: .2s;
+      color: inherit;
+      font-weight: inherit;
+      font-size: 18px;
+      line-height: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding-bottom: 12px;
       @media (max-width: 1379px) {
-        font-size: 0.9vw;
-        line-height: 1.1;
-        font-weight: 600;
+        font-size: 1.317vw;
+        line-height: 1.2;
+      }
+      @media (max-width: 1199px) {
+        padding-bottom: 10px;
+      }
+      @media (max-width: 991px) {
+        font-size: 2.09vw;
+        padding-bottom: 25%;
+      }
+      @media (max-width: 767px) {
+        font-size: 4.27vw;
+      }
+      &:after {
+        content: attr(data-price);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 700;
+        color: $c-text-light;
+        transition: .2s;
+        @media (max-width: 1379px) {
+          font-size: 0.9vw;
+          line-height: 1.1;
+          font-weight: 600;
+        }
+        @media (max-width: 991px) {
+          font-size: 1.31vw;
+        }
+        @media (max-width: 767px) {
+          font-size: 2.67vw;
+        }
       }
     }
+
     &[data-status="current"] {
       background: #fff;
     }
     &[data-activity="5"] {
       background: $c-blue;
       color: #fff;
-      & > span { color: #fff; }
+      & > span:after { color: #fff; }
     }
     &[data-activity="4"] {
       background: $c-blue-80;
       color: #fff;
-      & > span { color: #fff; }
+      & > span:after { color: #fff; }
     }
     &[data-activity="3"] {
       background: $c-blue-60;
       color: #fff;
-      & > span { color: #fff; }
+      & > span:after { color: #fff; }
     }
     &[data-activity="2"] {
       background: $c-blue-40;
-      & > span { color: #6E84A5; }
+      & > span:after { color: #6E84A5; }
     }
     &[data-activity="1"] {
       background: $c-blue-20;
-      & > span { color: #6E84A5; }
+      & > span:after { color: #6E84A5; }
     }
     &[data-selected="selected"] {
       background: $c-green;
@@ -137,7 +174,7 @@
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
       position: relative;
-      & > span { color: #fff; }
+      & > span:after { color: #fff; }
 
       & + & {
         background: #65d19d;
@@ -153,6 +190,9 @@
           height: 100%;
           width: 10px;
           z-index: 2;
+          @media (max-width: 1379px) {
+            width: 8px;
+          }
         }
       }
 
@@ -171,6 +211,7 @@
           right: calc(100% - 2px);
           top: 50%;
           transform: translateY(-50%);
+          z-index: 3;
         }
       }
       &[data-position="last"] {
@@ -185,13 +226,14 @@
           left: calc(100% - 2px);
           top: 50%;
           transform: translateY(-50%);
+          z-index: 3;
         }
       }
     }
     &:hover {
       background: $c-green;
       color: #fff;
-      & > span { color: #fff; }
+      & > span:after { color: #fff; }
     }
   }
 }

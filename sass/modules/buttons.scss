@@ -49,6 +49,12 @@ a, button {
         color: $c-text;
       }
     }
+    &.is-active {
+      color: $c-text;
+      .icon {
+        color: $c-text;
+      }
+    }
   }
 
   &--full {
