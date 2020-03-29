@@ -10,10 +10,24 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <nav class="mobile-nav">
+        <div class="mobile-nav__head">
+            <a href="index.html"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="mobile-nav__body">
+            <button type="button" class="btn btn--text is-active">Календар</button>
+            <button type="button" class="btn btn--text">Бронювання</button>
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+        <div class="mobile-nav__footer">
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+    </nav>
+    
     <div class="wrapper">
-
         <main class="main">
             <header class="header">
+                <button class="header__burger btn btn--text"><i class="icon icon-menu"></i>Календар</button>
                 <div class="header__logo">
                     <a href="index.html"><img src="img/logo.svg" alt=""></a>
                 </div>
@@ -24,6 +38,10 @@
                 </nav>
                 <nav class="header__nav">
                     <button type="button" class="header__link">Гостинний двір</button>
+                </nav>
+                <nav class="header__nav header__nav--mobile">
+                    <button type="button" class="btn btn--text">Тиждень</button>
+                    <button type="button" class="btn btn--text">Місяць</button>
                 </nav>
             </header>
 
@@ -157,7 +175,7 @@
                     </div>
                     <div class="date-selector">
                         <button type="button" class="btn btn--text"><i class="icon icon-caret-left"></i></button>
-                        <span class="text-dark">Сьогодні, 1 квітня</span>
+                        <span class="text-dark"><span class="hidden-mob"></span>Сьогодні, </span>1 квітня</span>
                         <button type="button" class="btn btn--text"><i class="icon icon-caret-right"></i></button>
                     </div>
                 </div>

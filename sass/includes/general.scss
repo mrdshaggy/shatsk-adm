@@ -49,15 +49,19 @@ body {
         }
         @media (max-width: 991px) {
             transform: translateX(100%);
+            &.is-active {
+                transform: none;
+            }
         }
         @media (max-width: 767px) {
             transform: none;
             position: fixed;
-            top: 60%;
+            bottom: 50px;
             left: 0;
-            height: 40%;
+            height: 50%;
             width: 100%;
             z-index: 3;
+            transform: translateY(calc(100% + 50px));
         }
     }
     
@@ -71,8 +75,26 @@ body {
             width: 100%;
         }
     }
+    .guests {
+        @media (max-width: 767px) {
+            z-index: 5;
+            height: calc(50% + 50px);
+        }
+    }
+    .guests-btn {
+        @media (max-width: 767px) {
+            height: 50px;
+        }
+    }
 }
 
 img {
     max-width: 100%;
+}
+
+// extra classes 
+.hidden-mob {
+    @media (max-width: 767px) {
+        display: none;
+    }
 }

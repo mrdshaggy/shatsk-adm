@@ -15,6 +15,17 @@
       padding: 20px 30px;
       min-height: 100px;
     }
+    @media (max-width: 767px) {
+      padding: 15px 20px;
+      min-height: 0;
+      order: 2;
+      h3, .h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+    } 
     &--back {
       h3, .h3 {
         display: flex;
@@ -35,12 +46,24 @@
       font-size: 18px;
       line-height: 22px;
       flex-basis: auto;
+      @media (max-width: 767px) {
+        margin-top: 2px;
+      }
     }
   }
 
   &__body {
     flex: 1;
     overflow-y: auto;
+    @media (max-width: 767px) {
+      order: 3;
+    }
+  }
+
+  &__footer {
+    @media (max-width: 767px) {
+      order: 1;
+    }
   }
 
   &__row {
@@ -66,6 +89,12 @@
       @media (max-height: 795px) and (min-width: 992px) {
         padding-top: 20px;
         padding-bottom: 20px;
+      }
+      @media (max-width: 767px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-height: 0;
+        
       }
     }
 

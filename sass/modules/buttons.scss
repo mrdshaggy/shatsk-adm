@@ -70,6 +70,18 @@ a, button {
     @media (max-height: 795px) and (min-width: 992px) {
       min-height: 80px;
     }
+    @media (max-width: 767px) {
+      min-height: 58px;
+      padding: 5px 20px;
+      h4, .h4 {
+        font-size: 14px;
+        line-height: 17px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
   }
 
   &--fullwidth {

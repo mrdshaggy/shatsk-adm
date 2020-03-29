@@ -8,6 +8,9 @@
   background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
   transform: translateY(100%);
   transition: transform .3s;
+  @media (max-width: 767px) {
+    padding: 5px 20px 20px;
+  }
 
   &.is-active {
     transform: translateY(0);
@@ -19,10 +22,26 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 30px;
+    @media (max-width: 767px) {
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
   }
 
   &__type {
-    
+    @media (max-width: 767px) {
+      .btn--transparent {
+        padding: 0;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.is-active {
+          background: transparent;
+          box-shadow: none;
+        }
+      }
+    }
   }
 
   &__body {
@@ -30,6 +49,11 @@
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      overflow: auto;
+      max-height: calc(100% - 70px);
+    }
   }
 }
 
@@ -50,6 +74,14 @@
   position: relative;
   cursor: pointer;
   transition: .2s;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 69px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -57,22 +89,46 @@
     color: $c-blue;
     margin-bottom: 2px;
     @include truncate();
+    @media (max-width: 767px) {
+      width: 65%;
+      margin-bottom: 0;
+    }
   }
   &__term {
     @include truncate();
+    @media (max-width: 767px) {
+      order: 3;
+      font-size: 12px;
+      margin-top: 4px;
+    }
   }
   &__name {
     justify-self: flex-end;
     margin: auto 0 0;
     @include truncate();
+    @media (max-width: 767px) {
+      order: 2;
+      justify-self: flex-start;
+      align-self: flex-end;
+      margin-left: auto;
+      font-size: 12px;
+      width: 30%;
+      text-align: right;
+    }
   }
 
   &--checked {
     background: transparent;
     border: 2px solid $c-border;
     box-shadow: none;
+    @media (max-width: 767px) {
+      padding-left: 44px;
+    }
     .guest__name {
       padding-right: 24px;
+      @media (max-width: 767px) {
+        padding-right: 0;
+      }
     }
     &:after {
       content: "\e906";
@@ -89,6 +145,15 @@
       right: 12px;
       bottom: 16px;
       transition: .2s;
+      @media (max-width: 767px) {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        right: auto;
+        left: 15px;
+        bottom: auto;
+        top: 15px;
+      }
     }
   }
 
@@ -142,4 +207,7 @@
 
 .guests-close-btn {
   padding-left: 0;
+  @media (max-width: 767px) {
+    margin-right: 100%;
+  }
 }

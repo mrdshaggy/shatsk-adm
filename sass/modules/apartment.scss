@@ -21,9 +21,15 @@
     justify-self: flex-end;
     margin-left: auto;
     text-align: right;
+    @media (max-width: 767px) {
+      align-self: center;
+    }
     .btn--green {
       margin: -10px -20px 0 0;
       @media (max-height: 795px) and (min-width: 992px) {
+        margin-top: 0;
+      }
+      @media (max-width: 767px) {
         margin-top: 0;
       }
     }
