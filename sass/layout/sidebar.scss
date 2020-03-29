@@ -21,6 +21,10 @@
       order: 2;
       h3, .h3 {
         font-size: 16px;
+        line-height: 1.1;
+        & > .btn {
+          height: auto;
+        }
       }
       p {
         font-size: 14px;
@@ -77,6 +81,9 @@
       padding: 20px 30px;
       min-height: auto;
     }
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
 
     & > .text-dark {
       & + .text-small {
@@ -108,5 +115,22 @@
     }
     &[data-status="active"]:before { background-color: $c-green; }
     &[data-status="booked"]:before { background-color: $c-blue; }
+  }
+
+  &--fullscreen {
+    @media (max-width: 767px) {
+      .sidebar__head {
+        order: 1;
+        h3, .h3 {
+          font-size: 24px;
+        }
+      }
+      .sidebar__body {
+        order: 2;
+      }
+      .sidebar__footer {
+        order: 3;
+      }
+    }
   }
 }

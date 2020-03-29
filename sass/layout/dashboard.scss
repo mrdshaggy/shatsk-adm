@@ -1,11 +1,10 @@
 .dashboard {
-  padding: 30px 60px 80px;
-  max-height: calc(100% - 80px);
+  padding: 30px 60px;
+  max-height: calc(100% - 140px);
   overflow-y: auto;
   @media (max-height: 795px) and (min-width: 992px) {
     padding-top: 20px;
-    padding-bottom: 50px;
-    max-height: calc(100% - 60px);
+    max-height: calc(100% - 100px);
   }
   @media (max-width: 1439px) {
     padding-left: 30px;
@@ -32,6 +31,11 @@
     }
     @media (max-width: 767px) {
       display: none;
+    }
+    .year-number {
+      align-self: center;
+      justify-self: flex-end;
+      margin-left: auto;
     }
   }
 
@@ -100,6 +104,54 @@
       }
       @media (max-width: 767px) {
         grid-template-columns: 1fr;
+      }
+    }
+
+    &[data-view="year"] {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 60px;
+      grid-row-gap: 15px;
+      @media (max-width: 1439px) {
+        grid-column-gap: 30px;
+      }
+      @media (max-width: 1199px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 30px;
+      }
+      .month {
+        &__title {
+          font-size: 18px;
+          line-height: 22px;
+          color: $c-text;
+        }
+      }
+      .calendar {
+        &__head {
+          padding-top: 4px;
+        }
+        &__body {
+          grid-gap: 3px;
+        }
+        &__day {
+          min-width: 0;
+          height: 0;
+          padding-bottom: calc(100% - 1px);
+          @media (max-width: 1500px) {
+            border-radius: 6px;
+          }
+          & > span{
+            padding-bottom: 0;
+            font-size: 0.695vw;
+            line-height: 1;
+            @media (max-width: 991px) {
+              font-size: 12px;
+            }
+            &:after {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

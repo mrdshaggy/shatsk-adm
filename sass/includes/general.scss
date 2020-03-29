@@ -48,7 +48,14 @@ body {
             width: 350px;
         }
         @media (max-width: 991px) {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            z-index: 6;
+            width: 375px;
             transform: translateX(100%);
+            transition: transform .3s ease-in-out;
             &.is-active {
                 transform: none;
             }
@@ -62,6 +69,12 @@ body {
             width: 100%;
             z-index: 3;
             transform: translateY(calc(100% + 50px));
+            &--fullscreen {
+                bottom: 0;
+                height: 100%;
+                transform: translateY(100%);
+                z-index: 6;
+            }
         }
     }
     

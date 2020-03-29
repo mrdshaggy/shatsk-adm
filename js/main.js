@@ -7,28 +7,31 @@ console.log('main.js');
 var content = document.getElementById('pRange'),
     scrollStep = 100;
 
-document.getElementById('pRangeRight').addEventListener('click', function(e) {
-  e.preventDefault();
-  let sl = content.scrollLeft,
-      cw = content.scrollWidth;
-	
-  if ((sl + scrollStep) >= cw) {
-    content.scrollTo(cw, 0);
-  } else {
-    content.scrollTo((sl + scrollStep), 0);
-  }
-});
+if (content) {
+  document.getElementById('pRangeRight').addEventListener('click', function(e) {
+    e.preventDefault();
+    let sl = content.scrollLeft,
+        cw = content.scrollWidth;
+    
+    if ((sl + scrollStep) >= cw) {
+      content.scrollTo(cw, 0);
+    } else {
+      content.scrollTo((sl + scrollStep), 0);
+    }
+  });
+  
+  document.getElementById('pRangeLeft').addEventListener('click', function(e) {
+    e.preventDefault();
+    let sl = content.scrollLeft;
+    
+    if ((sl - scrollStep) <= 0) {
+      content.scrollTo(0, 0);
+    } else {
+      content.scrollTo((sl - scrollStep), 0);
+    }
+  });
+}
 
-document.getElementById('pRangeLeft').addEventListener('click', function(e) {
-  e.preventDefault();
-  let sl = content.scrollLeft;
-	
-  if ((sl - scrollStep) <= 0) {
-    content.scrollTo(0, 0);
-  } else {
-    content.scrollTo((sl - scrollStep), 0);
-  }
-});
 
 
 //
@@ -50,6 +53,8 @@ document.addEventListener('click', function (event) {
   if (!event.target.closest('.mobile-nav')) return;
   mobNav.classList.remove('is-active');
 }, false);
+
+
 
 
 

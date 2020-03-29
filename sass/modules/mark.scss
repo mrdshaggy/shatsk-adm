@@ -7,6 +7,13 @@
   justify-content: center;
   background: $c-border;
   transition: .2s;
+  @media (max-width: 767px) {
+    width: 20px;
+    height: 20px;
+    .icon {
+      font-size: 12px;
+    }
+  }
   .icon {
     color: #fff;
   }
