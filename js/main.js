@@ -55,6 +55,24 @@ document.addEventListener('click', function (event) {
 }, false);
 
 
+//
+// Modals
+//
+function openModal(id) {
+  this.addEventListener('click', function(){
+    var modal = document.getElementById(id);
+    modal.classList.add('is-active');
+  });
+}
+
+function closeModal(e) {
+  this.addEventListener('click', function(){
+    var modal = e.closest(".modal");
+    modal.classList.remove('is-active');
+  });
+}
+
+
 
 
 

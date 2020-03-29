@@ -111,3 +111,8 @@ img {
         display: none;
     }
 }
+.visible-mob {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}

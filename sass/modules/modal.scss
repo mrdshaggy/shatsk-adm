@@ -1,0 +1,55 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#3B495F, .48);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: opacity .3s ease-in-out;
+    &.is-active {
+        z-index: 10;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__wrapper {
+        background: #fff;
+        margin: 0 30px;
+        box-shadow: 0px 4px 16px rgba(51, 59, 72, 0.08);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding-right: 0;
+        height: auto;
+    }
+
+    &__head {
+        min-height: 50px;
+        padding: 15px 0;
+        color: $c-text;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid rgba($c-border, .4);
+    }
+
+    &__actions {
+        & > .btn {
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid rgba($c-border, .4);
+        }
+    }
+}

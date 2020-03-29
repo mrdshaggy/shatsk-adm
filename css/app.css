@@ -972,6 +972,10 @@ img {
   .hidden-mob {
     display: none; } }
 
+@media (min-width: 768px) {
+  .visible-mob {
+    display: none; } }
+
 a, button {
   text-decoration: none;
   outline: none;
@@ -1037,8 +1041,7 @@ a, button {
         min-height: 58px;
         padding: 5px 20px; }
         .btn--full h4, .btn--full .h4 {
-          font-size: 14px;
-          line-height: 17px; }
+          font-size: 18px; }
         .btn--full p {
           font-size: 12px;
           line-height: 15px; } }
@@ -1600,6 +1603,55 @@ textarea.form-control {
     padding: 0 20px; }
     .mobile-nav__footer > .btn {
       padding: 0; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 73, 95, 0.48);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: opacity .3s ease-in-out; }
+  .modal.is-active {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible; }
+  .modal__wrapper {
+    background: #fff;
+    margin: 0 30px;
+    box-shadow: 0px 4px 16px rgba(51, 59, 72, 0.08);
+    border-radius: 12px;
+    position: relative; }
+  .modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding-right: 0;
+    height: auto; }
+  .modal__head {
+    min-height: 50px;
+    padding: 15px 0;
+    color: #3B495F;
+    font-size: 18px;
+    line-height: 22px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    border-bottom: 1px solid rgba(210, 217, 227, 0.4); }
+  .modal__actions > .btn {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(210, 217, 227, 0.4); }
 
 .header {
   padding: 0 60px;

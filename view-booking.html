@@ -199,7 +199,7 @@
             </div>
         </main>
 
-        <aside class="sidebar sidebar--fullscreen">
+        <aside class="sidebar sidebar--fullscreen is-active">
             <div class="sidebar__head">
                 <h3 class="text-dark">Ср, 1 квітня 2020 -
                     Cб, 4 квітня 2020</h3>
@@ -252,7 +252,7 @@
                 </div>
             </div>
             <div class="sidebar__footer">
-                <div class="add-action">
+                <div class="add-action hidden-mob">
                     <div class="add-action__head">
                         <button type="button" class="add-action__btn btn btn--text">Додаткові дії</button>
                         <button type="button" class="add-action__close btn btn--text"><i class="icon icon-remove"></i></button>
@@ -261,6 +261,19 @@
                         <div class="btn-group btn-group--column">
                             <button type="button" class="btn btn--text">Редагувати бронювання</button>
                             <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="visible-mob text-center">
+                    <button type="button" class="add-action__btn btn btn--text h6" onclick="openModal('addActions');">Додаткові дії</button>
+                    <div class="modal" id="addActions">
+                        <div class="modal__wrapper">
+                            <button class="modal__close btn btn--text" onclick="closeModal(this);"><i class="icon icon-remove"></i></button>
+                            <div class="modal__head">Додаткові дії</div>
+                            <div class="modal__actions">
+                                <button type="button" class="btn btn--text">Редагувати бронювання</button>
+                                <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                            </div>
                         </div>
                     </div>
                 </div>
