@@ -65,7 +65,8 @@ body {
             position: fixed;
             bottom: 50px;
             left: 0;
-            height: 50%;
+            height: auto;
+            max-height: 50%;
             width: 100%;
             z-index: 3;
             transform: translateY(calc(100% + 50px));

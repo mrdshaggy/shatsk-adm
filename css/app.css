@@ -937,7 +937,8 @@ body {
         position: fixed;
         bottom: 50px;
         left: 0;
-        height: 50%;
+        height: auto;
+        max-height: 50%;
         width: 100%;
         z-index: 3;
         transform: translateY(calc(100% + 50px)); }
@@ -1653,6 +1654,125 @@ textarea.form-control {
     height: 50px;
     border-bottom: 1px solid rgba(210, 217, 227, 0.4); }
 
+.week__row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative; }
+  .week__row > * {
+    -ms-flex: 1;
+        flex: 1;
+    transition: color .3s;
+    border-width: 1px;
+    border-right-style: solid;
+    border-color: #D2D9E3;
+    margin-left: -2px;
+    padding: 4px 0; }
+  .week__row:first-child > * {
+    border-image: linear-gradient(to top, #D2D9E3, rgba(0, 0, 0, 0)) 1 100%; }
+  .week__row:last-child > * {
+    border-image: linear-gradient(to bottom, #D2D9E3, rgba(0, 0, 0, 0)) 1 100%; }
+  .week__row:before {
+    content: attr(data-name);
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color .3s; }
+  .week__row--dates {
+    -ms-flex-align: start;
+        align-items: flex-start; }
+    .week__row--dates > *:not(.btn) {
+      padding-top: 0;
+      padding-bottom: 45px;
+      text-align: center; }
+    .week__row--dates .btn {
+      position: absolute;
+      border: none;
+      height: 18px;
+      padding: 0 10px; }
+      .week__row--dates .btn.week__btn-prev {
+        right: calc(100% - 120px); }
+      .week__row--dates .btn.week__btn-next {
+        left: 100%; }
+  .week__row:not(.week__row--dates):hover > *, .week__row:not(.week__row--dates):hover:before {
+    color: #3787FF; }
+
+.week__day-btn {
+  height: 60px;
+  padding: 0;
+  width: calc(100% - 8px);
+  border-radius: 12px;
+  transition: background-color .3s;
+  transform: translateX(30px);
+  font-size: 12px;
+  padding-right: 60px;
+  margin: 0; }
+  .week__day-btn:hover {
+    background: #00BB6B;
+    color: #fff; }
+    .week__day-btn:hover:after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: calc(20% - 1px);
+      background-image: linear-gradient(to bottom, transparent 50%, #fff 50%);
+      background-size: 1px 13%; }
+
+.week__day-wrap[data-status="booked"] > .week__day-btn {
+  background: #D7E7FF;
+  color: #8BA0C0;
+  position: relative;
+  border-radius: 0; }
+  .week__day-wrap[data-status="booked"] > .week__day-btn:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: calc(20% - 1px);
+    background-image: linear-gradient(to bottom, transparent 50%, #C2D4EF 50%);
+    background-size: 1px 13%; }
+
+.week__day-wrap[data-status="active"] > .week__day-btn {
+  background: #00BB6B;
+  color: #fff; }
+  .week__day-wrap[data-status="active"] > .week__day-btn:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: calc(20% - 1px);
+    background-image: linear-gradient(to bottom, transparent 50%, #fff 50%);
+    background-size: 1px 13%; }
+
+.week__day-wrap[data-position="first"] > .week__day-btn {
+  border-radius: 12px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%; }
+
+.week__day-wrap[data-position="first"] ~ .week__day-wrap[data-status] > .week__day-btn {
+  width: 100%; }
+
+.week__day-wrap[data-position="last"] > .week__day-btn {
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: calc(100% - 8px) !important; }
+
+.week__day-wrap[data-position="single"] > .week__day-btn {
+  border-radius: 12px;
+  width: calc(100% - 8px) !important; }
+
 .header {
   padding: 0 60px;
   border-bottom: 1px solid #D2D9E3;
@@ -1751,7 +1871,7 @@ textarea.form-control {
     @media (max-width: 767px) {
       .dashboard__type {
         display: none; } }
-    .dashboard__type .year-number {
+    .dashboard__type .self-right {
       -ms-flex-item-align: center;
           -ms-grid-row-align: center;
           align-self: center;
@@ -1799,6 +1919,8 @@ textarea.form-control {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           box-shadow: 16px 4px 16px rgba(51, 59, 72, 0.08); }
+  .dashboard__view[data-view="week"] {
+    padding-right: 35px; }
   .dashboard__view[data-view="month"] {
     display: -ms-grid;
     display: grid;

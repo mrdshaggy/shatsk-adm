@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shatsk Admin</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <nav class="mobile-nav">
+        <div class="mobile-nav__head">
+            <a href="index.html"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="mobile-nav__body">
+            <button type="button" class="btn btn--text is-active">Календар</button>
+            <button type="button" class="btn btn--text">Бронювання</button>
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+        <div class="mobile-nav__footer">
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <main class="main">
+            <header class="header">
+                <button class="header__burger btn btn--text"><i class="icon icon-menu"></i>Календар</button>
+                <div class="header__logo">
+                    <a href="index.html"><img src="img/logo.svg" alt=""></a>
+                </div>
+                <nav class="header__nav">
+                    <button type="button" class="header__link is-active">Календар</button>
+                    <button type="button" class="header__link">Бронювання</button>
+                    <button type="button" class="header__link">Номери</button>
+                </nav>
+                <nav class="header__nav">
+                    <button type="button" class="header__link">Гостинний двір</button>
+                </nav>
+                <nav class="header__nav header__nav--mobile">
+                    <button type="button" class="btn btn--text">Тиждень</button>
+                    <button type="button" class="btn btn--text">Місяць</button>
+                </nav>
+            </header>
+
+            <div class="dashboard">
+                <div class="dashboard__type">
+                    <button type="button" class="btn btn--transparent is-active">Тиждень</button>
+                    <button type="button" class="btn btn--transparent">Місяць</button>
+                    <button type="button" class="btn btn--transparent">Рік</button>
+                    <div class="self-right">
+                        <div class="date-selector">
+                            <button type="button" class="btn btn--text"><i class="icon icon-caret-left"></i></button>
+                            <span class="text-dark">Ср, 1 квітня - Вт, 7 квітня</span>
+                            <button type="button" class="btn btn--text"><i class="icon icon-caret-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="dashboard__view" data-view="week">
+                    <div class="week">
+                        <div class="week__row week__row--dates">
+                            <button class="btn btn--text week__btn-prev"><i class="icon icon-arrow-left"></i></button>
+                            <div class="week__day-wrap">Ср, 1 квітня</div>
+                            <div class="week__day-wrap">Чт, 2 квітня</div>
+                            <div class="week__day-wrap">Пт, 3 квітня</div>
+                            <div class="week__day-wrap">Сб, 4 квітня</div>
+                            <div class="week__day-wrap">Нд, 5 квітня</div>
+                            <div class="week__day-wrap">Пн, 6 квітня</div>
+                            <div class="week__day-wrap">Вт, 7 квітня</div>
+                            <button class="btn btn--text week__btn-next"><i class="icon icon-arrow-right"></i></button>
+                        </div>
+                        <div class="week__row" data-name="Одномісний">
+                            <div class="week__day-wrap"><button class="btn week__day-btn">500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">500</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="first"><button class="btn week__day-btn">500</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="last"><button class="btn week__day-btn">500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">500</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="first"><button class="btn week__day-btn">500</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="last"><button class="btn week__day-btn">500</button></div>
+                        </div>
+                        <div class="week__row" data-name="Двомісний 1">
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="single"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                        </div>
+                        <div class="week__row" data-name="Двомісний 2">
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="first"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap" data-status="booked"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap" data-status="booked"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="last"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                        </div>
+                        <div class="week__row" data-name="Тримісний">
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1000</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="first"><button class="btn week__day-btn">1000</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="last"><button class="btn week__day-btn">1000</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1000</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="single"><button class="btn week__day-btn">1000</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="first"><button class="btn week__day-btn">1000</button></div>
+                            <div class="week__day-wrap" data-status="booked"><button class="btn week__day-btn">1000</button></div>
+                        </div>
+                        <div class="week__row" data-name="Сімейний">
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap" data-status="active" data-position="first"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap" data-status="active" data-position="last"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
+                        </div>
+                        <div class="week__row" data-name="Котедж">
+                            <div class="week__day-wrap" data-status="booked" data-position="first"><button class="btn week__day-btn">2500</button></div>
+                            <div class="week__day-wrap" data-status="booked" data-position="last"><button class="btn week__day-btn">2500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">2500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">2500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">2500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">2500</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">2500</button></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <button class="guests-btn btn btn--text">3 Заїзди  /  2 Виїзди</button>
+            <div class="guests">
+                <div class="guests__head">
+                    <div class="guests__type">
+                        <button type="button" class="guests-close-btn btn btn--text"><i class="icon icon-remove"></i></button>
+                        <button type="button" class="btn btn--transparent is-active">Заїзди</button>
+                        <button type="button" class="btn btn--transparent">Виїзди</button>
+                    </div>
+                    <div class="date-selector">
+                        <button type="button" class="btn btn--text"><i class="icon icon-caret-left"></i></button>
+                        <span class="text-dark"><span class="hidden-mob">Сьогодні, </span>1 квітня</span>
+                        <button type="button" class="btn btn--text"><i class="icon icon-caret-right"></i></button>
+                    </div>
+                </div>
+                <div class="guests__body">
+                    <div class="guest">
+                        <div class="guest__room">Одномісний</div>
+                        <div class="guest__term">3 ночі</div>
+                        <div class="guest__name">Андрій Андрійович Андрійко</div>
+                    </div>
+                    <div class="guest">
+                        <div class="guest__room">Двомісний</div>
+                        <div class="guest__term">3 ночі</div>
+                        <div class="guest__name">Галина</div>
+                    </div>
+                    <div class="guest guest--checked">
+                        <div class="guest__room">Котедж / Двомісний люкс</div>
+                        <div class="guest__term">3 ночі</div>
+                        <div class="guest__name">Володимир Володимирович</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar sidebar--fullscreen is-active">
+            <div class="sidebar__head">
+                <h3 class="text-dark">Ср, 1 квітня 2020 -
+                    Cб, 4 квітня 2020</h3>
+                <div class="sidebar__info">
+                    <p>3 ночі</p>
+                </div>
+            </div>
+            <div class="sidebar__body">
+                <div class="sidebar__row">
+                    <div class="apartment">
+                        <div class="apartment__info">
+                            <span class="text-small">1</span>
+                            <i class="icon icon-guests"></i>
+                        </div>
+                        <div class="apartment__name">
+                            <span class="text-dark">Одномісний</span>
+                            <p class="text-small price">Андрій / (063) 123 45 67</p>
+                        </div>
+                        <div class="apartment__status">
+                            <p class="text-light">500 грн</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row">
+                    <p class="text-dark">Коментар</p>
+                    <p class="text-small text-light">Заїзд після 20:00</p>
+                </div>
+                <div class="sidebar__row">
+                    <div class="booking">
+                        <div class="booking__head">
+                            <p class="text-dark">Вартість бронювання</p>
+                            <p class="text-dark">1500 грн</p>
+                        </div>
+                        <div class="booking__body">
+                            <div class="booking__room">
+                                <p>Одномісний</p>
+                                <p>500 * 3</p>
+                                <p>1500 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row">
+                    <div class="booking">
+                        <div class="booking__head">
+                            <p class="text-dark">До оплати</p>
+                            <h4 class="text-dark">4000 грн</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__footer">
+                <div class="sidebar__row">
+                    <div class="btn-group btn-group--column">
+                        <button type="button" class="btn btn--green btn--lg btn--fullwidth">Редагувати</button>
+                        <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+    
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
