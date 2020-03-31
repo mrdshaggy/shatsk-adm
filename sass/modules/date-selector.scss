@@ -6,4 +6,12 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  & > span {
+    flex: 1;
+    text-align: center;
+  }
+
+  .visible-mob & {
+    margin-bottom: 17px;
+  }
 }

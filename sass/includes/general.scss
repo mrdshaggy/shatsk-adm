@@ -3,6 +3,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
     * {
         box-sizing: border-box;
         vertical-align: middle;
@@ -29,6 +30,10 @@ body {
     align-items: stretch;
     height: 100%;
     overflow: hidden;
+    @media (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     
     .main {
         background: linear-gradient(180deg, #F7F8FA 0%, #F0F2F5 100%);
@@ -38,6 +43,8 @@ body {
         }
         @media (max-width: 991px) {
             width: 100%;
+            height: 50%;
+            flex: 1;
         }
     }
 
@@ -48,33 +55,27 @@ body {
             width: 350px;
         }
         @media (max-width: 991px) {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            height: 100%;
-            z-index: 6;
-            width: 375px;
-            transform: translateX(100%);
-            transition: transform .3s ease-in-out;
-            &.is-active {
-                transform: none;
+            max-height: 50%;
+            width: 100%;
+            padding-bottom: 70px;
+            &--fullscreen {
+                position: fixed;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateX(100%);
+                z-index: 6;
+                transition: transform .3s ease-in-out;
+                padding-bottom: 0;
+                &.is-active {
+                    transform: none;
+                }
             }
         }
         @media (max-width: 767px) {
-            transform: none;
-            position: fixed;
-            bottom: 50px;
-            left: 0;
-            height: auto;
-            max-height: 50%;
-            width: 100%;
-            z-index: 3;
-            transform: translateY(calc(100% + 50px));
+            padding-bottom: 50px;
             &--fullscreen {
-                bottom: 0;
-                height: 100%;
-                transform: translateY(100%);
-                z-index: 6;
+                padding-bottom: 0;
             }
         }
     }
@@ -114,6 +115,17 @@ img {
 }
 .visible-mob {
     @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.hidden-ipad {
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+.visible-ipad {
+    @media (min-width: 992px) {
         display: none;
     }
 }

@@ -92,7 +92,7 @@
                         </div>
                         <div class="week__row" data-name="Двомісний 1">
                             <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
-                            <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
+                            <div class="week__day-wrap" data-status="active" data-position="single"><button class="btn week__day-btn">750</button></div>
                             <div class="week__day-wrap" data-status="booked" data-position="single"><button class="btn week__day-btn">750</button></div>
                             <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
                             <div class="week__day-wrap"><button class="btn week__day-btn">750</button></div>
@@ -118,8 +118,8 @@
                             <div class="week__day-wrap" data-status="booked"><button class="btn week__day-btn">1000</button></div>
                         </div>
                         <div class="week__row" data-name="Сімейний">
-                            <div class="week__day-wrap" data-status="active" data-position="first"><button class="btn week__day-btn">1250</button></div>
-                            <div class="week__day-wrap" data-status="active" data-position="last"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
+                            <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
                             <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
                             <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
                             <div class="week__day-wrap"><button class="btn week__day-btn">1250</button></div>
@@ -178,67 +178,38 @@
 
         <aside class="sidebar">
             <div class="sidebar__head">
-                <h3 class="text-dark">Ср, 1 квітня 2020 -
-                    Cб, 4 квітня 2020</h3>
-                <div class="sidebar__info">
-                    <p>3 ночі</p>
-                </div>
+                <h3 class="text-dark">Пн, 6 квітня 2020</h3>
             </div>
             <div class="sidebar__body">
-                <div class="sidebar__row">
+                <div class="sidebar__row sidebar__row--apartment" data-status="active">
                     <div class="apartment">
                         <div class="apartment__info">
-                            <span class="text-small">1</span>
+                            <span class="text-small">2</span>
                             <i class="icon icon-guests"></i>
                         </div>
                         <div class="apartment__name">
-                            <span class="text-dark">Одномісний</span>
-                            <p class="text-small price">Андрій / (063) 123 45 67</p>
+                            <span class="text-dark">Двомісний 1</span>
+                            <p class="text-small price">Вільно до чт, 9 квітня (3 ночі)</p>
                         </div>
                         <div class="apartment__status">
-                            <p class="text-light">500 грн</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar__row">
-                    <p class="text-dark">Коментар</p>
-                    <p class="text-small text-light">Заїзд після 20:00</p>
-                </div>
-                <div class="sidebar__row">
-                    <div class="booking">
-                        <div class="booking__head">
-                            <p class="text-dark">Вартість бронювання</p>
-                            <p class="text-dark">1500 грн</p>
-                        </div>
-                        <div class="booking__body">
-                            <div class="booking__room">
-                                <p>Одномісний</p>
-                                <p>500 * 3</p>
-                                <p>1500 грн</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar__row">
-                    <div class="booking">
-                        <div class="booking__head">
-                            <p class="text-dark">До оплати</p>
-                            <h4 class="text-dark">4000 грн</h4>
+                            <p class="text-light">750 грн</p>
                         </div>
                     </div>
                 </div>
                 <div class="sidebar__row visible-ipad">
-                    <div class="btn-group btn-group--equal">
-                        <button type="button" class="btn btn--green btn--lg">Редагувати</button>
-                        <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                    <div class="btn-group btn-group--column">
+                        <button type="button" class="btn btn--text">Змінити ціну</button>
+                        <button type="button" class="btn btn--text">Позначити номер як недоступний</button>
+                        <button type="button" class="btn btn--green btn--lg btn--fullwidth">Створити бронювання</button>
                     </div>
                 </div>
             </div>
             <div class="sidebar__footer hidden-ipad">
                 <div class="sidebar__row">
                     <div class="btn-group btn-group--column">
-                        <button type="button" class="btn btn--green btn--lg btn--fullwidth">Редагувати</button>
-                        <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                        <button type="button" class="btn btn--green btn--lg btn--fullwidth">Створити бронювання</button>
+                        <button type="button" class="btn btn--text">Позначити номер як недоступний</button>
+                        <button type="button" class="btn btn--text">Змінити ціну</button>
                     </div>
                 </div>
             </div>

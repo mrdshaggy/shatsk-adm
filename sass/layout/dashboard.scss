@@ -2,6 +2,7 @@
   padding: 30px 60px;
   max-height: calc(100% - 140px);
   overflow-y: auto;
+  overflow-x: hidden;
   @media (max-height: 795px) and (min-width: 992px) {
     padding-top: 20px;
     max-height: calc(100% - 100px);
@@ -12,11 +13,11 @@
   }
   @media (max-width: 991px) {
     padding-top: 20px;
-    max-height: calc(100% - 120px);
+    max-height: calc(100% - 50px);
   }
   @media (max-width: 767px) {
-    padding: 0 20px 50px;
-    max-height: calc(100% - 126px);
+    padding: 0 20px 70px;
+    max-height: calc(100% - 76px);
   }
   &__type {
     display: flex;
@@ -88,6 +89,12 @@
   &__view {
     &[data-view="week"] {
       padding-right: 35px;
+      @media (max-width: 1199px) {
+        padding-right: 20px;
+      }
+      @media (max-width: 767px) {
+        padding-right: 0;
+      }
     }
 
     &[data-view="month"] {
