@@ -82,13 +82,15 @@ function closeModal(e) {
 var guestBtn = document.querySelector('.guests-btn');
 var guestCloseBtn = document.querySelector('.guests-close-btn');
 var todayGuests = document.querySelector('.guests');
-guestBtn.addEventListener('click', toggleGuests);
-guestCloseBtn.addEventListener('click', toggleGuests);
-function toggleGuests() {
-  if (todayGuests.classList.contains('is-active')) {
-    todayGuests.classList.remove('is-active');
-  } else {
-    todayGuests.classList.add('is-active');
+if (guestBtn) {
+  guestBtn.addEventListener('click', toggleGuests);
+  guestCloseBtn.addEventListener('click', toggleGuests);
+  function toggleGuests() {
+    if (todayGuests.classList.contains('is-active')) {
+      todayGuests.classList.remove('is-active');
+    } else {
+      todayGuests.classList.add('is-active');
+    }
   }
 }
 
@@ -106,6 +108,26 @@ if (addActionBtn) {
   }
   function hideContent() {
     addAction.classList.remove('is-active');
+  }
+}
+
+//
+// table actions
+//
+var tr = document.querySelectorAll('[data-status]');
+var sidebar = document.getElementById('bookingInfo');
+var closeSidebar = document.getElementById('closeBookingInfo');
+if (sidebar) {
+  tr.forEach(row => {
+    row.addEventListener('click', toggleSidebar);
+  });
+  closeSidebar.addEventListener('click', toggleSidebar);
+  function toggleSidebar() {
+    if (sidebar.classList.contains('is-active')) {
+      sidebar.classList.remove('is-active');
+    } else {
+      sidebar.classList.add('is-active');
+    }
   }
 }
 

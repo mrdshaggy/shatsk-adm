@@ -138,4 +138,17 @@
       }
     }
   }
+
+  &--fixed {
+    position: fixed;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    z-index: 6;
+    transition: transform .3s ease-in-out;
+    &.is-active {
+      transform: none;
+    }
+  }
 }

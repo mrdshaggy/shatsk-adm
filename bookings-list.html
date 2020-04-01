@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shatsk Admin</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <nav class="mobile-nav">
+        <div class="mobile-nav__head">
+            <a href="index.html"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="mobile-nav__body">
+            <button type="button" class="btn btn--text">Календар</button>
+            <button type="button" class="btn btn--text is-active">Бронювання</button>
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+        <div class="mobile-nav__footer">
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <main class="main">
+            <header class="header">
+                <button class="header__burger btn btn--text"><i class="icon icon-menu"></i>Календар</button>
+                <div class="header__logo">
+                    <a href="index.html"><img src="img/logo.svg" alt=""></a>
+                </div>
+                <nav class="header__nav">
+                    <button type="button" class="header__link">Календар</button>
+                    <button type="button" class="header__link is-active">Бронювання</button>
+                    <button type="button" class="header__link">Номери</button>
+                </nav>
+                <nav class="header__nav">
+                    <button type="button" class="header__link">Гостинний двір</button>
+                </nav>
+                <nav class="header__nav header__nav--mobile">
+                    <div class="form-select">
+                        <select class="form-control" name="" id="">
+                            <option value="">Усі номери</option>
+                            <option value="">Усі номери</option>
+                            <option value="">Усі номери</option>
+                        </select>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="dashboard dashboard--bookings">
+                <div class="dashboard__type">
+                    <button type="button" class="btn btn--transparent is-active">Усі бронювання</button>
+                    <button type="button" class="btn btn--transparent">Тривають</button>
+                    <button type="button" class="btn btn--transparent">Заплановані</button>
+                    <button type="button" class="btn btn--transparent">Минулі</button>
+                    <div class="self-right hidden-ipad">
+                        <div class="form-select">
+                            <select class="form-control" name="" id="">
+                                <option value="">Усі номери</option>
+                                <option value="">Усі номери</option>
+                                <option value="">Усі номери</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__search">
+                    <div class="form-search">
+                        <img class="form-search__icon" src="img/search_icon.svg" alt="">
+                        <input type="search" class="form-control" placeholder="Введіть номер телефону, ім'я гостя або назву номера">
+                    </div>
+                </div>
+                <div class="dashboard__view" data-view="bookings">
+                    <table class="table">
+                        <thead class="table__head">
+                            <tr>
+                                <td>Заїзд</td>
+                                <td>Виїзд</td>
+                                <td>Тривалість</td>
+                                <td>Номери</td>
+                                <td>Ім'я гостя</td>
+                                <td>Телефон</td>
+                                <td>Статус бронювання</td>
+                            </tr>
+                        </thead>
+                        <tbody class="table__body">
+                            <tr data-status="progress">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status">Триває</div>
+                                </td>
+                            </tr>
+                            <tr data-status="progress">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status">Триває</div>
+                                </td>
+                            </tr>
+                            <tr data-status="planned">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status status--md">Заплановано</div>
+                                </td>
+                            </tr>
+                            <tr data-status="planned">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status status--md">Заплановано</div>
+                                </td>
+                            </tr>
+                            <tr data-status="planned">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status status--md">Заплановано</div>
+                                </td>
+                            </tr>
+                            <tr data-status="planned">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status status--md">Заплановано</div>
+                                </td>
+                            </tr>
+                            <tr data-status="passed">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status status--md status--gray">Минуло</div>
+                                </td>
+                            </tr>
+                            <tr data-status="passed">
+                                <td>Пн, 30 бер</td>
+                                <td>Сб, 4 квіт</td>
+                                <td>5 ночей</td>
+                                <td>Двомісний 1</td>
+                                <td>Володимир</td>
+                                <td>(067) 123 45 67</td>
+                                <td>
+                                    <div class="status status--md status--gray">Минуло</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button class="btn btn--text is-active">1</button>
+                    <button class="btn btn--text">2</button>
+                    <button class="btn btn--text">3</button>
+                    <button class="btn btn--text">4</button>
+                    <button class="btn btn--text">...</button>
+                    <button class="btn btn--text">12</button>
+                </div>
+            </div>
+            
+        </main>
+
+        <aside class="sidebar sidebar--fullscreen sidebar--fixed" id="bookingInfo">
+            <div class="sidebar__head sidebar__head--back">
+                <h3 class="text-dark">
+                    <button type="button" class="btn btn--text" id="closeBookingInfo"><i class="icon icon-remove"></i></button>
+                    Пт, 3 квітня 2020 -
+                    Нд, 12 квітня 2020</h3>
+                <div class="sidebar__info">
+                    <p>12 ночей</p>
+                </div>
+            </div>
+            <div class="sidebar__body">
+                <div class="sidebar__row">
+                    <div class="apartment">
+                        <div class="apartment__info">
+                            <span class="text-small">1</span>
+                            <i class="icon icon-guests"></i>
+                        </div>
+                        <div class="apartment__name">
+                            <span class="text-dark">Одномісний</span>
+                            <p class="text-small price">Андрій / (063) 123 45 67</p>
+                        </div>
+                        <div class="apartment__status">
+                            <p class="text-light">500 грн</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row">
+                    <p class="text-dark">Коментар</p>
+                    <p class="text-small text-light">Заїзд після 20:00</p>
+                </div>
+                <div class="sidebar__row">
+                    <div class="booking">
+                        <div class="booking__head">
+                            <p class="text-dark">Вартість бронювання</p>
+                            <p class="text-dark">1500 грн</p>
+                        </div>
+                        <div class="booking__body">
+                            <div class="booking__room">
+                                <p>Одномісний</p>
+                                <p>500 * 3</p>
+                                <p>1500 грн</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__row">
+                    <div class="booking">
+                        <div class="booking__head">
+                            <p class="text-dark">До оплати</p>
+                            <h4 class="text-dark">4000 грн</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__footer">
+                <div class="add-action hidden-mob">
+                    <div class="add-action__head">
+                        <button type="button" class="add-action__btn btn btn--text">Додаткові дії</button>
+                        <button type="button" class="add-action__close btn btn--text"><i class="icon icon-remove"></i></button>
+                    </div>
+                    <div class="add-action__content">
+                        <div class="btn-group btn-group--column">
+                            <button type="button" class="btn btn--text">Редагувати бронювання</button>
+                            <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="visible-mob text-center">
+                    <button type="button" class="add-action__btn btn btn--text h6" onclick="openModal('addActions');">Додаткові дії</button>
+                    <div class="modal" id="addActions">
+                        <div class="modal__wrapper">
+                            <button class="modal__close btn btn--text" onclick="closeModal(this);"><i class="icon icon-remove"></i></button>
+                            <div class="modal__head">Додаткові дії</div>
+                            <div class="modal__actions">
+                                <button type="button" class="btn btn--text">Редагувати бронювання</button>
+                                <button type="button" class="btn btn--text">Скасувати бронювання</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--green btn--full">
+                    <h4 class="text-white">Заїзд відбувся</h4>
+                </button>
+            </div>
+        </aside>
+
+    </div>
+    
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.status {
+    height: 36px;
+    border-radius: 36px;
+    border: 1px solid $c-border;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    &--md {
+        width: 140px;
+    }
+    &--gray {
+        background: rgba(#8BA0C0, .2);
+        border-color: transparent;
+    }
+}
