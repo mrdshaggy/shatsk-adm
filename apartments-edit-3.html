@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shatsk Admin</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <nav class="mobile-nav">
+        <div class="mobile-nav__head">
+            <a href="index.html"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="mobile-nav__body">
+            <button type="button" class="btn btn--text is-active">Календар</button>
+            <button type="button" class="btn btn--text">Бронювання</button>
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+        <div class="mobile-nav__footer">
+            <button type="button" class="btn btn--text">Номери</button>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <main class="main">
+            <header class="header">
+                <button class="header__burger btn btn--text"><i class="icon icon-menu"></i>Календар</button>
+                <div class="header__logo">
+                    <a href="index.html"><img src="img/logo.svg" alt=""></a>
+                </div>
+                <nav class="header__nav">
+                    <button type="button" class="header__link is-active">Календар</button>
+                    <button type="button" class="header__link">Бронювання</button>
+                    <button type="button" class="header__link">Номери</button>
+                </nav>
+                <nav class="header__nav">
+                    <button type="button" class="header__link">Гостинний двір</button>
+                </nav>
+                <nav class="header__nav header__nav--mobile">
+                    <div class="form-select">
+                        <select class="form-control" name="" id="">
+                            <option value="">Одномісні</option>
+                            <option value="">Двомісні</option>
+                            <option value="">Тримісні</option>
+                            <option value="">Чотиримісні</option>
+                            <option value="">Котеджі</option>
+                        </select>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="dashboard">
+                <div class="dashboard__type">
+                    <button type="button" class="btn btn--transparent">Тиждень</button>
+                    <button type="button" class="btn btn--transparent is-active">Місяць</button>
+                    <button type="button" class="btn btn--transparent">Рік</button>
+                </div>
+                <div class="dashboard__rooms">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn--bordered btn--square btn--radius-sm visible-ipad" onclick="openModal('addRoom');"><span class="h4 text-regular">+</span></button>
+                        <button type="button" class="btn btn--green btn--radius-sm">Усі номери</button>
+                        <button type="button" class="btn btn--green btn--radius-sm">Двомісний 1</button>
+                        <button type="button" class="btn btn--green btn--radius-sm">Двомісний 2</button>
+                        <div class="self-right hidden-ipad">
+                            <button type="button" class="btn btn--bordered btn--radius-sm" onclick="openModal('addRoom');"><span class="h4 text-regular">+</span>&nbsp; Додати номер</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__period">
+                    <button type="button" class="btn btn--text" id="pRangeLeft"><i class="icon icon-arrow-left"></i></button>
+                    <div class="p-range" id="pRange">
+                        <button type="button" class="btn btn--transparent">Січень</button>
+                        <button type="button" class="btn btn--transparent">Лютий</button>
+                        <button type="button" class="btn btn--transparent">Березень</button>
+                        <button type="button" class="btn btn--transparent is-active">Квітень</button>
+                        <button type="button" class="btn btn--transparent is-active">Травень</button>
+                        <button type="button" class="btn btn--transparent">Червень</button>
+                        <button type="button" class="btn btn--transparent">Липень</button>
+                        <button type="button" class="btn btn--transparent">Серпень</button>
+                        <button type="button" class="btn btn--transparent">Вересень</button>
+                        <button type="button" class="btn btn--transparent">Жовтень</button>
+                        <button type="button" class="btn btn--transparent">Листопад</button>
+                        <button type="button" class="btn btn--transparent">Грудень</button>
+                    </div>
+                    <button type="button" class="btn btn--text" id="pRangeRight"><i class="icon icon-arrow-right"></i></button>
+                </div>
+                <div class="dashboard__view" data-view="month">
+                    <div class="month">
+                        <h4 class="month__title">Квітень</h4>
+                        <div class="calendar">
+                            <ul class="calendar__head">
+                                <li class="calendar__weekday">Пн</li>
+                                <li class="calendar__weekday">Вт</li>
+                                <li class="calendar__weekday">Ср</li>
+                                <li class="calendar__weekday">Чт</li>
+                                <li class="calendar__weekday">Пт</li>
+                                <li class="calendar__weekday">Сб</li>
+                                <li class="calendar__weekday">Нд</li>
+                            </ul>
+                            <div class="calendar__body" data-startday="3">
+                                <button class="calendar__day"><span data-price="3600">1</span></button>
+                                <button class="calendar__day" data-activity="1"><span data-price="360">2</span></button>
+                                <button class="calendar__day" data-selected="selected" data-position="first"><span data-price="360">3</span></button>
+                                <button class="calendar__day" data-selected="selected" data-position="last"><span data-price="360">4</span></button>
+                                <button class="calendar__day" data-activity="3"><span data-price="360">5</span></button>
+                                <button class="calendar__day"><span data-price="360">6</span></button>
+                                <button class="calendar__day"><span data-price="360">7</span></button>
+                                <button class="calendar__day" data-activity="2"><span data-price="360">8</span></button>
+                                <button class="calendar__day" data-activity="2"><span data-price="360">9</span></button>
+                                <button class="calendar__day" data-activity="4"><span data-price="360">10</span></button>
+                                <button class="calendar__day"><span data-price="360">11</span></button>
+                                <button class="calendar__day" data-activity="5"><span data-price="360">12</span></button>
+                                <button class="calendar__day" data-activity="2"><span data-price="360">13</span></button>
+                                <button class="calendar__day" data-activity="3"><span data-price="360">14</span></button>
+                                <button class="calendar__day"><span data-price="360">15</span></button>
+                                <button class="calendar__day"><span data-price="360">16</span></button>
+                                <button class="calendar__day" data-status="current"><span data-price="360">17</span></button>
+                                <button class="calendar__day"><span data-price="360">18</span></button>
+                                <button class="calendar__day" data-activity="1"><span data-price="360">19</span></button>
+                                <button class="calendar__day" data-activity="5"><span data-price="360">20</span></button>
+                                <button class="calendar__day"><span data-price="360">21</span></button>
+                                <button class="calendar__day"><span data-price="360">22</span></button>
+                                <button class="calendar__day"><span data-price="360">23</span></button>
+                                <button class="calendar__day" data-activity="4"><span data-price="360">24</span></button>
+                                <button class="calendar__day" data-activity="4"><span data-price="360">25</span></button>
+                                <button class="calendar__day"><span data-price="360">26</span></button>
+                                <button class="calendar__day"><span data-price="360">27</span></button>
+                                <button class="calendar__day"><span data-price="360">28</span></button>
+                                <button class="calendar__day"><span data-price="360">29</span></button>
+                                <button class="calendar__day" data-activity="3"><span data-price="360">30</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="month">
+                        <h4 class="month__title">Травень</h4>
+                        <div class="calendar">
+                            <ul class="calendar__head">
+                                <li class="calendar__weekday">Пн</li>
+                                <li class="calendar__weekday">Вт</li>
+                                <li class="calendar__weekday">Ср</li>
+                                <li class="calendar__weekday">Чт</li>
+                                <li class="calendar__weekday">Пт</li>
+                                <li class="calendar__weekday">Сб</li>
+                                <li class="calendar__weekday">Нд</li>
+                            </ul>
+                            <div class="calendar__body" data-startday="5">
+                                <button class="calendar__day"><span data-price="360">1</span></button>
+                                <button class="calendar__day" data-activity="1"><span data-price="360">2</span></button>
+                                <button class="calendar__day"><span data-price="360">3</span></button>
+                                <button class="calendar__day"><span data-price="360">4</span></button>
+                                <button class="calendar__day" data-activity="3"><span data-price="360">5</span></button>
+                                <button class="calendar__day"><span data-price="360">6</span></button>
+                                <button class="calendar__day"><span data-price="360">7</span></button>
+                                <button class="calendar__day" data-activity="2"><span data-price="360">8</span></button>
+                                <button class="calendar__day" data-activity="2"><span data-price="360">9</span></button>
+                                <button class="calendar__day" data-activity="4"><span data-price="360">10</span></button>
+                                <button class="calendar__day"><span data-price="360">11</span></button>
+                                <button class="calendar__day" data-activity="5"><span data-price="360">12</span></button>
+                                <button class="calendar__day" data-activity="2"><span data-price="360">13</span></button>
+                                <button class="calendar__day" data-activity="3"><span data-price="360">14</span></button>
+                                <button class="calendar__day"><span data-price="360">15</span></button>
+                                <button class="calendar__day"><span data-price="360">16</span></button>
+                                <button class="calendar__day"><span data-price="360">17</span></button>
+                                <button class="calendar__day"><span data-price="360">18</span></button>
+                                <button class="calendar__day" data-activity="1"><span data-price="360">19</span></button>
+                                <button class="calendar__day" data-activity="5"><span data-price="360">20</span></button>
+                                <button class="calendar__day"><span data-price="360">21</span></button>
+                                <button class="calendar__day"><span data-price="360">22</span></button>
+                                <button class="calendar__day"><span data-price="360">23</span></button>
+                                <button class="calendar__day" data-activity="4"><span data-price="360">24</span></button>
+                                <button class="calendar__day" data-activity="4"><span data-price="360">25</span></button>
+                                <button class="calendar__day"><span data-price="360">26</span></button>
+                                <button class="calendar__day"><span data-price="360">27</span></button>
+                                <button class="calendar__day"><span data-price="360">28</span></button>
+                                <button class="calendar__day"><span data-price="360">29</span></button>
+                                <button class="calendar__day" data-activity="3"><span data-price="360">30</span></button>
+                                <button class="calendar__day" data-activity="1"><span data-price="360">31</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="guests-btn btn btn--text">3 Заїзди  /  2 Виїзди</button>
+            <div class="guests">
+                <div class="guests__head">
+                    <div class="guests__type">
+                        <button type="button" class="guests-close-btn btn btn--text"><i class="icon icon-remove"></i></button>
+                        <button type="button" class="btn btn--transparent is-active">Заїзди</button>
+                        <button type="button" class="btn btn--transparent">Виїзди</button>
+                    </div>
+                    <div class="date-selector">
+                        <button type="button" class="btn btn--text"><i class="icon icon-caret-left"></i></button>
+                        <span class="text-dark"><span class="hidden-mob">Сьогодні, </span>1 квітня</span>
+                        <button type="button" class="btn btn--text"><i class="icon icon-caret-right"></i></button>
+                    </div>
+                </div>
+                <div class="guests__body">
+                    <div class="guest">
+                        <div class="guest__room">Одномісний</div>
+                        <div class="guest__term">3 ночі</div>
+                        <div class="guest__name">Андрій Андрійович Андрійко</div>
+                    </div>
+                    <div class="guest">
+                        <div class="guest__room">Двомісний</div>
+                        <div class="guest__term">3 ночі</div>
+                        <div class="guest__name">Галина</div>
+                    </div>
+                    <div class="guest guest--checked">
+                        <div class="guest__room">Котедж / Двомісний люкс</div>
+                        <div class="guest__term">3 ночі</div>
+                        <div class="guest__name">Володимир Володимирович</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar sidebar--fullscreen sidebar--fixed is-active">
+            <div class="sidebar__head sidebar__head--sm sidebar__head--back">
+                <h3 class="text-dark">
+                    <button type="button" class="btn btn--text"><i class="icon icon-arrow-left"></i></button>
+                    Редагування номерів
+                </h3>
+            </div>
+            <div class="sidebar__body">
+                <div class="collapse">
+                    <button class="collapse__btn">Одномісні</button>
+                    <div class="collapse__content">
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark" contenteditable="true">Двомісний 1</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Готово</button>
+                            </div>
+                        </div>
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark">Двомісний 2</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Редагувати</button>
+                            </div>
+                        </div>
+                        <button class="add-apartment btn btn--link"><img src="img/add_icon.svg" alt=""> Додати новий номер</button>
+                    </div>
+                </div>
+                <div class="collapse is-active">
+                    <button class="collapse__btn">Двомісні</button>
+                    <div class="collapse__content">
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark" contenteditable="true">Двомісний 1</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Готово</button>
+                            </div>
+                        </div>
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark">Двомісний 2</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Редагувати</button>
+                            </div>
+                        </div>
+                        <button class="add-apartment btn btn--link"><img src="img/add_icon.svg" alt=""> Додати новий номер</button>
+                    </div>
+                </div>
+                <div class="collapse">
+                    <button class="collapse__btn">Тримісні</button>
+                    <div class="collapse__content">
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark" contenteditable="true">Двомісний 1</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Готово</button>
+                            </div>
+                        </div>
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark">Двомісний 2</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Редагувати</button>
+                            </div>
+                        </div>
+                        <button class="add-apartment btn btn--link"><img src="img/add_icon.svg" alt=""> Додати новий номер</button>
+                    </div>
+                </div>
+                <div class="collapse">
+                    <button class="collapse__btn">Чотиримісні</button>
+                    <div class="collapse__content">
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark" contenteditable="true">Двомісний 1</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Готово</button>
+                            </div>
+                        </div>
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark">Двомісний 2</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Редагувати</button>
+                            </div>
+                        </div>
+                        <button class="add-apartment btn btn--link"><img src="img/add_icon.svg" alt=""> Додати новий номер</button>
+                    </div>
+                </div>
+                <div class="collapse">
+                    <button class="collapse__btn">Котеджі</button>
+                    <div class="collapse__content">
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark" contenteditable="true">Двомісний 1</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Готово</button>
+                            </div>
+                        </div>
+                        <div class="apartment">
+                            <div class="apartment__info">
+                                <span class="text-small">2</span>
+                                <i class="icon icon-guests"></i>
+                            </div>
+                            <div class="apartment__name">
+                                <span class="text-dark">Двомісний 2</span>
+                                <p class="text-small price">750 грн</p>
+                            </div>
+                            <div class="apartment__status self-top">
+                                <button class="btn btn--link btn--nosize">Редагувати</button>
+                            </div>
+                        </div>
+                        <button class="add-apartment btn btn--link"><img src="img/add_icon.svg" alt=""> Додати новий номер</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar__footer">
+                <div class="sidebar__row">
+                    <div class="btn-group btn-group--equal">
+                        <button type="button" class="btn btn--lg btn--green btn--radius-sm">Зберегти</button>
+                        <button type="button" class="btn btn--lg btn--bordered btn--radius-sm">Скасувати</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="modal" id="addRoom">
+        <div class="modal__wrapper">
+            <button class="modal__close btn btn--text" onclick="closeModal(this);"><i class="icon icon-remove"></i></button>
+            <div class="modal__head">Тип номера</div>
+            <div class="modal__actions">
+                <button type="button" class="btn btn--text">Одномісні</button>
+                <button type="button" class="btn btn--text">Двомісні</button>
+                <button type="button" class="btn btn--text">Тримісні</button>
+                <button type="button" class="btn btn--text">Чотиримісні</button>
+                <button type="button" class="btn btn--text">Котеджі</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

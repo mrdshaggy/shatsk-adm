@@ -2,6 +2,20 @@
   & + & {
     margin-top: 15px;
   }
+  &--between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .form-label {
+      margin-bottom: 0;
+      @media (max-width: 1379px) {
+        padding-left: 0;
+      }
+    }
+    .form-control {
+      max-width: 50%;
+    }
+  }
 }
 
 .form-label {
@@ -93,5 +107,51 @@ textarea.form-control {
     @include input-placeholder() {
       color: $c-text-light;
     }
+  }
+}
+
+
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 32px;
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 32px;
+    background-color: #ccc;
+    transition: .3s;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      left: 4px;
+      bottom: 4px;
+      border-radius: 50%;
+      background-color: white;
+      transition: .3s;
+    }
+  }
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  input:checked + .toggle__slider {
+    background-color: $c-green;
+  }
+  input:focus + .toggle__slider {
+    box-shadow: 0 0 1px $c-green;
+  }
+  input:checked + .toggle__slider:before {
+    transform: translateX(22px);
   }
 }

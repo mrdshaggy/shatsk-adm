@@ -54,6 +54,9 @@ body {
         background: #fff;
         @media (max-width: 1379px) {
             width: 350px;
+            &--fixed {
+                width: 390px;
+            }
         }
         @media (max-width: 991px) {
             max-height: 50%;
@@ -112,23 +115,34 @@ img {
 
 // extra classes 
 .hidden-mob {
-    @media (max-width: 767px) {
-        display: none;
-    }
+    @media (max-width: 767px) { display: none!important; }
 }
 .visible-mob {
-    @media (min-width: 768px) {
-        display: none;
-    }
+    @media (min-width: 768px) { display: none!important; }
 }
 
 .hidden-ipad {
-    @media (max-width: 991px) {
-        display: none;
-    }
+    @media (max-width: 991px) { display: none!important; }
 }
 .visible-ipad {
-    @media (min-width: 992px) {
-        display: none;
-    }
+    @media (min-width: 992px) { display: none!important; }
+}
+
+
+// alignment
+.self-right {
+    align-self: center;
+    justify-self: flex-end;
+    margin-left: auto;
+}
+.self-top {
+    align-self: flex-start!important;
+}
+
+// contenteditable
+[contenteditable] {
+    display: block;
+    min-height: 17px;
+    background: $c-blue-80;
+    color: #fff;
 }

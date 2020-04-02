@@ -21,6 +21,25 @@ a, button {
     border-radius: 12px;
     padding: 0 40px;
   }
+  &--radius-sm {
+    border-radius: 12px;
+  }
+  &--nosize {
+    height: auto;
+    padding: 0;
+  }
+  &--square {
+    min-width: 36px;
+    width: 36px;
+    padding: 0;
+  }
+
+  &--link {
+    color: $c-blue;
+    &:hover {
+      color: rgba($c-blue, .8);
+    }
+  }
 
   &--transparent {
     transition: color .2s;
@@ -37,6 +56,10 @@ a, button {
   &--green {
     background: $c-green;
     color: #fff;
+    transition: .2s;
+    &:hover {
+      background: rgba($c-green, .8);
+    }
   }
 
   &--text {
@@ -55,6 +78,14 @@ a, button {
       .icon {
         color: $c-text;
       }
+    }
+  }
+
+  &--bordered {
+    border: 2px solid $c-border;
+    transition: .2s;
+    &:hover {
+      background: rgba($c-border, .2);
     }
   }
 

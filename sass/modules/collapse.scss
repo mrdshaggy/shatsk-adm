@@ -1,0 +1,39 @@
+.collapse {
+    &__btn {
+        height: 36px;
+        padding: 0 20px;
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: .2s;
+        &:after {
+            content: "\e905";
+            @include icomoon();
+            transform: rotate(90deg);
+            transition: transform .2s;
+        }
+        &:hover {
+            color: $c-text;
+        }
+    }
+
+    &__content {
+        height: 0;
+        overflow: hidden;
+        .apartment {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba($c-border, .4);
+            margin-top: 0;
+        }
+    }
+
+    &.is-active {
+        .collapse__btn:after {
+            transform: rotate(-90deg);
+        }
+        .collapse__content {
+            height: auto;
+        }
+    }
+}

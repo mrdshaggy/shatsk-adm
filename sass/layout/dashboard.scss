@@ -68,10 +68,21 @@
     @media (max-width: 767px) {
       display: none;
     }
-    .self-right {
-      align-self: center;
-      justify-self: flex-end;
-      margin-left: auto;
+  }
+
+  &__rooms {
+    margin-bottom: 50px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-height: 795px) and (min-width: 992px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
     }
   }
 
